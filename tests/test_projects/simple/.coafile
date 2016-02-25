@@ -1,0 +1,3 @@
+[python]
+files = **/*.py
+bears = PEP8Bear, RadonBear

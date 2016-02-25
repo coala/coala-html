@@ -1,0 +1,89 @@
+{
+  "logs": [
+    {
+      "log_level": 2,
+      "message": "Bear RadonBear failed to run. Take a look at debug messages for further information.",
+      "timestamp": "2016-02-19T14:57:16.724881"
+    }
+  ],
+  "results": {
+    "default": [],
+    "python": [
+      {
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "test.py",
+              "line": 2
+            },
+            "file": "test.py",
+            "start": {
+              "column": null,
+              "file": "test.py",
+              "line": 2
+            }
+          }
+        ],
+        "debug_msg": "",
+        "diffs": {
+          "test.py": "--- \n+++ \n@@ -1,5 +1,5 @@\n import sys\n-entry_point=sys.argv[1]\n+entry_point = sys.argv[1]\n print sys.argv\n for entry in ['coala-json']:\n     if entry_point.endswith(entry):\n"
+        },
+        "id": 142670851947745291222400006097395474829,
+        "message": "The code does not comply to PEP8.",
+        "origin": "PEP8Bear",
+        "severity": 1
+      },
+      {
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "test.py",
+              "line": 6
+            },
+            "file": "test.py",
+            "start": {
+              "column": null,
+              "file": "test.py",
+              "line": 6
+            }
+          }
+        ],
+        "debug_msg": "",
+        "diffs": {
+          "test.py": "--- \n+++ \n@@ -3,7 +3,7 @@\n print sys.argv\n for entry in ['coala-json']:\n     if entry_point.endswith(entry):\n-        parser_type=entry\n+        parser_type = entry\n         break\n else:\n     parser_type='coala'\n"
+        },
+        "id": 288030533630229017404140894953282630785,
+        "message": "The code does not comply to PEP8.",
+        "origin": "PEP8Bear",
+        "severity": 1
+      },
+      {
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "test.py",
+              "line": 9
+            },
+            "file": "test.py",
+            "start": {
+              "column": null,
+              "file": "test.py",
+              "line": 9
+            }
+          }
+        ],
+        "debug_msg": "",
+        "diffs": {
+          "test.py": "--- \n+++ \n@@ -6,7 +6,7 @@\n         parser_type=entry\n         break\n else:\n-    parser_type='coala'\n+    parser_type = 'coala'\n # print\n # todo\n # fixme\n"
+        },
+        "id": 245262844203778487057502264162681622523,
+        "message": "The code does not comply to PEP8.",
+        "origin": "PEP8Bear",
+        "severity": 1
+      }
+    ]
+  }
+}
