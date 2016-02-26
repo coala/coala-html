@@ -10,10 +10,9 @@
         <span class="origin">{{ item.origin  }}</span>
         <br/>
         <span class="message">{{ item.message }}</span>
-        <div ng-repeat="n in range(item.start, item.end)">
-          <span class="line-no">{{ n }}</span>
-          <code>{{ content[file][n-1] }}</code>
-        </div>
+        <pre><!-- 
+           -->{{ content[file].slice(item.start-1, item.end).join("\n") }}<!-- 
+         --></pre>
       </div>
   </div>
 </div>
