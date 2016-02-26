@@ -49,4 +49,16 @@ angular.module('coalaHtmlApp')
       }
       return input;
     };
+  })
+  .directive('prettyprint', function() {
+    return {
+      priority: 10,  // Decrease priority so it's run after ngBindHtml
+      restrict: 'C',
+      link: function postLink(scope, element, attrs) {
+        // When ngBindHtml changes value, we parse the html again
+        scope.$watch(attrs.ngBindHtml, function(newValue) {
+          element.html(prettyPrintOne(newValue, '', true));
+        });
+      }
+    };
   });
