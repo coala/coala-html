@@ -12,7 +12,7 @@
         <span class="message">{{ item.message }}</span>
         <pre
           ng-bind-html="content[file].slice(item.start-1, item.end).join('\n')"
-          class="prettyprint linenum"></pre>
+          class="prettyprint linenums:{{ item.start }}"></pre>
       </div>
   </div>
 </div>
