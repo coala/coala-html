@@ -34,3 +34,6 @@
 .search-wrap {
     text-align: center;
 }
+.prettyprint ol.linenums > li {
+    list-style-type: decimal;
+}

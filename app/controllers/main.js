@@ -57,7 +57,16 @@ angular.module('coalaHtmlApp')
       link: function postLink(scope, element, attrs) {
         // When ngBindHtml changes value, we parse the html again
         scope.$watch(attrs.ngBindHtml, function(newValue) {
-          element.html(prettyPrintOne(newValue, '', true));
+          // Look for a class like linenums or linenums:<n> where <n> is the
+          // 1-indexed number of the first line.
+          var elementClasses = element[0].className;
+          var lineNumClass = elementClasses.match(/\blinenums\b(?::(\d+))?/);
+          var lineNums = Boolean(lineNumClass);
+          if (lineNumClass[1] && lineNumClass[1].length > 0) {
+            lineNums = +lineNumClass[1];  // Convert to integer
+          }
+
+          element.html(prettyPrintOne(newValue, '', lineNums));
         });
       }
     };
