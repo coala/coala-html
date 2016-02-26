@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('coalaHtmlApp', ['ngRoute'])
+  .module('coalaHtmlApp', ['ngRoute', 'ngSanitize'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
