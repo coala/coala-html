@@ -1,0 +1,8 @@
+{
+  "name": "coala-html",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "bootstrap": "^3.3.6"
+  }
+}
