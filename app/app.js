@@ -9,6 +9,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/logs', {
+        templateUrl: 'app/views/logs.html',
+        controller: 'LogsCtrl',
+        controllerAs: 'logs'
+      })
       .otherwise({
         redirectTo: '/'
       });
