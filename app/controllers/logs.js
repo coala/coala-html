@@ -9,6 +9,5 @@ angular.module('coalaHtmlApp')
         $scope.data = response.logs;
       });
     };
-    $scope.LOG_LEVELS = ["DEBUG", "INFO", "WARNING", "ERROR"];
     parseCoalaProject("tests/test_projects/simple");
   });

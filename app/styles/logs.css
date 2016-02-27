@@ -6,15 +6,6 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-.log-level-debug {
-    color: green;
-}
-.log-level-info {
-    color: blue;
-}
-.log-level-warning {
-    color: orange;
-}
-.log-level-error {
-    color: red;
+.log-message {
+    margin-left: 5px;
 }

@@ -4,7 +4,6 @@ angular.module('coalaHtmlApp')
   .controller('MainCtrl', function ($scope, $http) {
     var parseCoalaProject = function(projectDir, coalaJSON) {
       coalaJSON = coalaJSON || projectDir + '/coala.json';
-      var severity = ["INFO", "NORMAL", "MAJOR"];
       $scope.data = [];
       $http.get(coalaJSON).success(function(response){
         var knownFiles = {};
@@ -26,7 +25,7 @@ angular.module('coalaHtmlApp')
             "diffs":    el.diffs,
             "message":  el.message,
             "origin":   el.origin,
-            "severity": severity[el.severity]
+            "severity": el.severity
           });
         };
 
