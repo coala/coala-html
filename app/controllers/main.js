@@ -69,4 +69,29 @@ angular.module('coalaHtmlApp')
         });
       }
     };
+  })
+  .directive('bsNavActive', function($location) {
+    return {
+      restrict: 'A',
+      link: function postLink(scope, element) {
+        // Watch for the $location
+        scope.$watch(function() {
+          return $location.path();
+        }, function(newValue) {
+          var liElements = element[0].getElementsByTagName('li');
+
+          angular.forEach(liElements, function(li) {
+            var liElement = angular.element(li);
+            var aElement = angular.element(li.getElementsByTagName('a'));
+            var href = aElement.attr('href');
+
+            if ('#' + newValue === href) {
+              liElement.addClass('active');
+            } else {
+              liElement.removeClass('active');
+            }
+          });
+        });
+      }
+    };
   });
