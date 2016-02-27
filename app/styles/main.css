@@ -1,8 +1,6 @@
 .code {
     padding: 10px;
     margin: 5px;
-    font-size: 12px;
-    line-height: 18px;
     background-color: white;
     border: 1px solid #D8D8D8;
     border-top-left-radius: 4px;
@@ -10,13 +8,6 @@
 }
 .origin {
     color: #269E37;
-}
-.message {
-    font-size: 17px;
-}
-.line-no {
-    color: #000;
-    color: rgba(0, 0, 0, 0.3);
 }
 .severity-info {
     color: skyblue;
