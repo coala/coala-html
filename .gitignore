@@ -3,14 +3,10 @@
 .kdev4
 __pycache__
 *~
-build
 *.mo
-dist
-MANIFEST
 *.pyc
 .coverage
 *.patch
-_build
 coverage.xml
 htmlcov
 *.orig
@@ -22,7 +18,6 @@ htmlcov
 .python-version
 .egg-info
 .coverage.*
-src
 site
 .zanata-cache
 *.exe
