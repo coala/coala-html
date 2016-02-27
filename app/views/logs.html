@@ -1,2 +1,10 @@
-<div>
+<div class="logs">
+  <div class="log" ng-repeat="log_message in data">
+    LOG LEVEL:
+    <span class="log-level-{{ LOG_LEVELS[log_message.log_level] | lowercase }}">
+      {{ LOG_LEVELS[log_message.log_level] }}
+    </span>
+    <br>
+    <span class="message">{{ log_message.message }}</span>
+  </div>
 </div>
