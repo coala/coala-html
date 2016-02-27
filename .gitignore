@@ -29,4 +29,3 @@ node_modules
 .vendor
 Goopfile.lock
 npm-debug.log
-bower_components
