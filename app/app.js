@@ -21,6 +21,11 @@ angular
         controller: 'LogsCtrl',
         controllerAs: 'logs'
       })
+      .when('/file/:fileName*?', {
+        templateUrl: 'app/views/files.html',
+        controller: 'FilesCtrl',
+        controllerAs: 'files'
+      })
       .otherwise({
         redirectTo: '/'
       });
