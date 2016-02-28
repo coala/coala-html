@@ -1,6 +1,21 @@
+sudo: false
 language: node_js
 node_js:
   - "4.1"
+
+cache:
+  - pip
+  directories:
+    - node_modules
+
+before_install:
+  - npm install -g bower
+  - bower install
+  - pip install -r requirements.txt
+
+after_script:
+  - coala
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email: false
