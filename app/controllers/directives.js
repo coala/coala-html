@@ -46,4 +46,29 @@ angular.module('coalaHtmlApp')
         });
       }
     };
+  })
+  .directive('tableRowLinks', function() {
+    return {
+      priority: 10,
+      restrict: 'A',
+      link: function postLink(scope, element) {
+        scope.$watch(function () {
+          return element[0].childNodes.length;
+        }, function() {
+          var trElements = element[0].getElementsByTagName('tr');
+
+          angular.forEach(trElements, function(tr) {
+            var trElement = angular.element(tr);
+            var aElement = angular.element(tr.getElementsByTagName('a'));
+
+            if (aElement.length !== 0) {
+              trElement.addClass("table-row-link");
+              trElement.on("click", function() {
+                aElement[0].click();
+              });
+            }
+          });
+        });
+      }
+    };
   });

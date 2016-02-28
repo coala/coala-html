@@ -1,3 +1,7 @@
 .dir-contents .file-name {
     margin-left: 5px;
 }
+.table-row-link {
+    cursor: pointer;
+    cursor: hand;
+}
