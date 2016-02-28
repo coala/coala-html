@@ -13,7 +13,7 @@ angular.module('coalaHtmlApp')
           var elementClasses = element[0].className;
           var lineNumClass = elementClasses.match(/\blinenums\b(?::(\d+))?/);
           var lineNums = Boolean(lineNumClass);
-          if (lineNumClass[1] && lineNumClass[1].length > 0) {
+          if (lineNumClass && lineNumClass[1] && lineNumClass[1].length > 0) {
             lineNums = +lineNumClass[1];  // Convert to integer
           }
 
