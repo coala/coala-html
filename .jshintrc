@@ -10,8 +10,20 @@
   "strict": true,
   "undef": true,
   "unused": true,
+  "expr": true,
   "globals": {
     "angular": false,
-    "prettyPrintOne": false
+    "prettyPrintOne": false,
+    // MOCHA
+    "describe" : false,
+    "it" : false,
+    "before" : false,
+    "beforeEach" : false,
+    "after" : false,
+    "afterEach" : false,
+    // Chai
+    "expect" : false,
+    // ng-mock
+    "inject" : false
   }
 }

@@ -1,5 +1,5 @@
 [js]
-files = app/**/*.js
+files = app/**/*.js, tests/specs/**/*.js
 bears = LineLengthBear, SpaceConsistencyBear, JSHintBear
 jshint_config = ./.jshintrc
 use_spaces = true
