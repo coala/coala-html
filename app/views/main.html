@@ -4,6 +4,7 @@
 <div ng-repeat="info in data">
   <div ng-repeat="(file, result) in info">
       <div class="code" ng-repeat="item in result | filter:q">
+        <span class="text-primary">{{ file }}</span><br/>
         <span class="severity
                      label label-{{ SEVERITY_TO_BOOTSTRAP[item.severity] }}">
           {{ RESULT_SEVERITY[item.severity] }}
