@@ -10,22 +10,23 @@ angular.module('coalaHtmlApp')
         $scope.content = {};
 
         var parseResult = function(el){
-          var sourceRange = el.affected_code[0];
-          if (!(sourceRange.file in knownFiles)){
-              knownFiles[sourceRange.file] = [];
+          el.affected_code.forEach(function(sourceRange){
+              if (!(sourceRange.file in knownFiles)){
+                  knownFiles[sourceRange.file] = [];
 
-              $http.get(projectDir + "/" + sourceRange.file)
-                .success(function(content) {
-                  $scope.content[sourceRange.file] = content.split("\n");
-                });
-          }
-          knownFiles[sourceRange.file].push({
-            "start":    sourceRange.start.line,
-            "end":      sourceRange.end.line,
-            "diffs":    el.diffs,
-            "message":  el.message,
-            "origin":   el.origin,
-            "severity": el.severity
+                  $http.get(projectDir + "/" + sourceRange.file)
+                    .success(function(content) {
+                      $scope.content[sourceRange.file] = content.split("\n");
+                    });
+              }
+              knownFiles[sourceRange.file].push({
+                "start":    sourceRange.start.line,
+                "end":      sourceRange.end.line,
+                "diffs":    el.diffs,
+                "message":  el.message,
+                "origin":   el.origin,
+                "severity": el.severity
+              });
           });
         };
 
