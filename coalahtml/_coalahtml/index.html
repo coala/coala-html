@@ -5,24 +5,22 @@
     <title>coala report</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
     <link rel='stylesheet' type='text/css'
       href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'>
     <link rel="stylesheet"
-          href="bower_components/bootstrap/dist/css/bootstrap.css">
+      href="http://getbootstrap.com/dist/css/bootstrap.min.css">
     <link rel="stylesheet"
-          href="bower_components/google-code-prettify/src/prettify.css">
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css">
     <link rel="stylesheet" href="app/styles/main.css">
     <link rel="stylesheet" href="app/styles/logs.css">
     <link rel="stylesheet" href="app/styles/files.css">
     <style>
-    body {
-      font-family: Lato, sans-serif;
-    }
-    .prettyprint .linenums > li {
-      list-style-type: decimal;
-    }
+      body {
+        font-family: Lato, sans-serif;
+      }
+      .prettyprint .linenums > li {
+        list-style-type: decimal;
+      }
     </style>
   </head>
   <body ng-app="coalaHtmlApp">
@@ -34,7 +32,6 @@
       </p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -67,12 +64,18 @@
     <div ng-view=""></div>
     </div>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script
-      src="bower_components/google-code-prettify/src/prettify.js"></script>
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+    </script>
     <script
-      src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js">
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js">
+    </script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.js">
+    </script>
 
     <script src="app/app.js"></script>
     <script src="app/controllers/directives.js"></script>
