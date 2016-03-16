@@ -1,0 +1,30 @@
+{
+  "logs": [],
+  "results": {
+    "default": [
+      {
+        "affected_code": [
+          {
+            "end": {
+              "column": null,
+              "file": "/tmp/tmp3jja1bub",
+              "line": null
+            },
+            "file": "/tmp/tmp3jja1bub",
+            "start": {
+              "column": null,
+              "file": "/tmp/tmp3jja1bub",
+              "line": null
+            }
+          }
+        ],
+        "debug_msg": "",
+        "diffs": null,
+        "id": 165240973608920196820126926745861318002,
+        "message": "This file has 1 lines.",
+        "origin": "LineCountBear",
+        "severity": 0
+      }
+    ]
+  }
+}

@@ -8,6 +8,7 @@ __pycache__
 .coverage
 *.patch
 coverage.xml
+coverage
 htmlcov
 *.orig
 *.diff
