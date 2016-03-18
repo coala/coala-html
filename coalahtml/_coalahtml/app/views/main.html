@@ -2,6 +2,9 @@
   <input ng-model="q" type="text" placeholder="Search" class="search"/>
 </div>
 <div ng-repeat="info in data">
+<!--   <div class="text-success" ng-hide="Object.keys(info).length" >
+    <p>Hey there! coala says it's all cool! No errors!</p>
+  </div> -->
   <div ng-repeat="(file, result) in info">
       <div class="code" ng-repeat="item in result | filter:q">
         <span class="text-primary">{{ file }}</span><br/>
@@ -13,8 +16,8 @@
         <br/>
         <span class="message">{{ item.message }}</span>
         <pre
-          ng-bind-html="content[file].slice(item.start-1, item.end).join('\n')"
-          class="prettyprint linenums:{{ item.start }}"></pre>
+         ng-bind-html="file_dict[file].slice(item.start-1, item.end).join('\n')"
+         class="prettyprint linenums:{{ item.start }}"></pre>
       </div>
   </div>
 </div>

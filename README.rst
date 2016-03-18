@@ -46,10 +46,8 @@ We appreciate any help!
 BUILD & DEVELOPMENT
 -------------------
 
-Run ``npm install`` and ``bower install`` to install the required
-dependencies.
-
-Open ``index.html`` for a preview.
+``python setup.py install``
+``coala-html -h``
 
 LICENSE
 =======

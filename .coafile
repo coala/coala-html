@@ -1,15 +1,16 @@
 [js]
-files = app/**/*.js
+files = coalahtml/_coalahtml/app/**/*.js
 bears = LineLengthBear, SpaceConsistencyBear, JSHintBear
 jshint_config = ./.jshintrc
 use_spaces = true
 
 [css]
-files = app/styles/*.css
+files = coalahtml/_coalahtml/app/styles/*.css
 bears = LineLengthBear, SpaceConsistencyBear, CSSLintBear
 use_spaces = true
 
 [html]
-files = index.html, app/views/*.html
+files = coalahtml/_coalahtml/index.html, coalahtml/_coalahtml/app/views/*.html
 bears = LineLengthBear, SpaceConsistencyBear
 use_spaces = true
+max_line_length = 90
