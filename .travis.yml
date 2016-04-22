@@ -2,5 +2,10 @@ language: node_js
 node_js:
   - "4.1"
 
+cache:
+  pip: true
+  directories:
+    - node_modules
+
 notifications:
   email: false
