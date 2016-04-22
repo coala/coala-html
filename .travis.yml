@@ -4,7 +4,7 @@ node_js:
   - "4.1"
 
 cache:
-  - pip
+  pip: true
   directories:
     - node_modules
 
