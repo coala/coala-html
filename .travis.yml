@@ -11,18 +11,22 @@ cache:
   pip: true
   directories:
     - node_modules
+    - coalahtml/_coalahtml/bower_components
 
 before_install:
   - sudo apt-get -y install python3-pip python-dev
   - sudo pip3 install -U pip setuptools virtualenvwrapper
-
   - npm install -g bower
+  - npm install
+  - cd coalahtml/_coalahtml
   - bower install
+  - cd -
   - sudo pip3 install -r requirements.txt
 
-after_script:
-  - coala
+script:
+  - npm test
   - bash <(curl -s https://codecov.io/bash)
+  - coala
 
 notifications:
   email: false

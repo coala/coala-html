@@ -14,12 +14,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'bower_components/angular/angular.js',
-        'bower_components/angular-route/angular-route.js',
-        'bower_components/angular-sanitize/angular-sanitize.js',
-        'bower_components/google-code-prettify/src/prettify.js',
-        'node_modules/angular-mocks/angular-mocks.js',
-        './app/**/*.js',
+        './coalahtml/_coalahtml/bower_components/angular/angular.js',
+        './coalahtml/_coalahtml/bower_components/angular-route/angular-route.js',
+        './coalahtml/_coalahtml/bower_components/angular-sanitize/angular-sanitize.js',
+        './coalahtml/_coalahtml/bower_components/google-code-prettify/src/prettify.js',
+        './node_modules/angular-mocks/angular-mocks.js',
+        './coalahtml/_coalahtml/app/**/*.js',
         './tests/**/*Spec.js'
     ],
 
@@ -32,7 +32,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './app/**/*.js': ['coverage']
+      './coalahtml/_coalahtml/app/**/*.js': ['coverage']
     },
 
     // test results reporter to use
