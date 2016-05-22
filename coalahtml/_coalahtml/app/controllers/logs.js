@@ -3,11 +3,14 @@
 angular.module('coalaHtmlApp')
   .controller('LogsCtrl', function ($scope, $http) {
     var parseCoalaProject = function(projectDir, coalaJSON) {
-      coalaJSON = coalaJSON || projectDir + '/coala.json';
+      coalaJSON = coalaJSON || projectDir + $scope.Constants.coala;
       $scope.data = [];
       $http.get(coalaJSON).success(function(response){
         $scope.data = response.logs;
       });
     };
-    parseCoalaProject("tests/test_projects/simple");
+    $http.get("data/Constants.json").success(function(content) {
+      $scope.Constants = content;
+      parseCoalaProject($scope.Constants.data);
+    });
   });
