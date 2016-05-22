@@ -1,3 +1,6 @@
+[Default]
+files = *.py, coalahtml/**/*.py, tests/*.py
+
 [js]
 files = coalahtml/_coalahtml/app/**/*.js, tests/specs/**/*.js
 bears = LineLengthBear, SpaceConsistencyBear, JSHintBear
@@ -13,3 +16,16 @@ use_spaces = true
 files = coalahtml/_coalahtml/index.html, coalahtml/_coalahtml/app/views/*.html
 bears = LineLengthBear, SpaceConsistencyBear
 use_spaces = true
+
+[python]
+# Patches may conflict with autopep8 so putting them in own section so they
+# will be executed sequentially; also we need the LineLengthBear to double
+# check the line length because PEP8Bear sometimes isn't able to correct the
+# linelength.
+bears = PyUnusedCodeBear
+default_actions =
+    PyUnusedCodeBear: ApplyPatchAction
+
+[autopep8]
+bears = PEP8Bear
+default_actions = PEP8Bear: ApplyPatchAction
