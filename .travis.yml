@@ -15,7 +15,7 @@ cache:
 
 before_install:
   - sudo apt-get -y install python3-pip python-dev
-  - sudo pip3 install -U pip setuptools virtualenvwrapper
+  - sudo pip3 install -U pip setuptools
   - npm install -g bower
   - npm install
   - cd coalahtml/_coalahtml
