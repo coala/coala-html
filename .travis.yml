@@ -21,6 +21,9 @@ before_install:
   - cd coalahtml/_coalahtml
   - bower install
   - cd -
+  # colorama needs to be upgraded to fix error when installed colorama 
+  # version and required are different.
+  - sudo pip3 install colorama==0.3.7
   - sudo pip3 install -r requirements.txt
 
 script:
