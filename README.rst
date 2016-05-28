@@ -46,10 +46,9 @@ We appreciate any help!
 BUILD & DEVELOPMENT
 -------------------
 
-Run ``npm install`` and ``bower install`` to install the required
-dependencies.
+Run ``python3 setup.py install``
 
-Open ``index.html`` for a preview.
+Note: You need to have bower installed before you may install the python packages.
 
 LICENSE
 =======
