@@ -13,3 +13,16 @@
 .search-wrap {
     text-align: center;
 }
+.result-badge, .file-badge, .log-badge {
+    padding: 4px 5px;
+    margin-left: 0.5em;
+}
+.result-badge {
+    background-color: #CE6F40;
+}
+.file-badge {
+    background-color: #88C88D;
+}
+.log-badge {
+    background-color: #888DC8;
+}

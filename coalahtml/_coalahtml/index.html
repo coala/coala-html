@@ -54,9 +54,27 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul bs-nav-active class="nav navbar-nav">
-              <li><a href="#/">Results</a></li>
-              <li><a href="#/file/">Files</a></li>
-              <li><a href="#/logs">Logs</a></li>
+              <li>
+                <a href="#/">Results
+                  <span ng-if="resultsCount" class = "result-badge badge">
+                    {{ resultsCount }}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#/file/">Files
+                  <span ng-if="filesCount" class = "file-badge badge">
+                    {{ filesCount }}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#/logs">Logs
+                  <span ng-if="logsCount" class = "log-badge badge">
+                    {{ logsCount }}
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

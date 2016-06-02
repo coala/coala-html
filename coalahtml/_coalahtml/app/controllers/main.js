@@ -24,9 +24,13 @@ angular.module('coalaHtmlApp')
         $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.coala)
           .then(function(coala_json) {
             $rootScope.COALA_JSON = coala_json.data;
+            $rootScope.logsCount = coala_json.data.logs.length;
+            var resultsCount = 0;
             for (var section in $rootScope.COALA_JSON.results) {
               $rootScope.COALA_JSON.results[section].forEach(parseResult);
+              resultsCount += $rootScope.COALA_JSON.results[section].length;
             }
+            $rootScope.resultsCount = resultsCount;
             $scope.data.push(knownFiles);
         });
       };

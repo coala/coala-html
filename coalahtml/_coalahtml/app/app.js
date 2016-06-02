@@ -13,6 +13,7 @@ angular
       $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.file_data)
         .then(function(file_data) {
           $rootScope.FILE_DATA = file_data.data;
+          $rootScope.filesCount = Object.keys(file_data.data).length;
       });
       $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.files)
         .then(function(files) {
