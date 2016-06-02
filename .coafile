@@ -6,6 +6,7 @@ files = coalahtml/_coalahtml/app/**/*.js, tests/specs/**/*.js
 bears = LineLengthBear, SpaceConsistencyBear, JSHintBear
 jshint_config = ./.jshintrc
 use_spaces = true
+max_line_length = 90
 
 [css]
 files = coalahtml/_coalahtml/app/styles/*.css
@@ -16,6 +17,7 @@ use_spaces = true
 files = coalahtml/_coalahtml/index.html, coalahtml/_coalahtml/app/views/*.html
 bears = LineLengthBear, SpaceConsistencyBear
 use_spaces = true
+max_line_length = 90
 
 [python]
 # Patches may conflict with autopep8 so putting them in own section so they
