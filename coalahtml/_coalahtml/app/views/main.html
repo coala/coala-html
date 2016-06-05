@@ -1,4 +1,4 @@
-<div class="search-wrap">
+<div class="search-wrap" ng-show="resultsCount">
   <input ng-model="q" type="text" placeholder="Search" class="search"/>
 </div>
 <div ng-repeat="info in data">
@@ -17,4 +17,7 @@
         class="prettyprint linenums:{{ item.start }}"></pre>
     </div>
   </div>
+</div>
+<div ng-hide="resultsCount">
+  <h3>Everything's fine. No errors found.</h2>
 </div>
