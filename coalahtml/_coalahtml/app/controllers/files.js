@@ -13,7 +13,7 @@ angular.module('coalaHtmlApp')
       $scope.fileBack = fileName.split("/").slice(0, -1).join('/');
       if ($rootScope.FILES.hasOwnProperty(fileName)) {
         $scope.fileType = "dir";
-        $scope.fileContents = {};
+        $scope.fileContents = [];
         $rootScope.FILES[fileName].forEach(function(file){
           var fileType = $rootScope.FILES.hasOwnProperty(file) ? "dir": "file";
           $scope.fileContents.push({'name' : file, 'type' : fileType});

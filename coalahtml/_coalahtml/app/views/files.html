@@ -13,14 +13,14 @@
           </a>
         </td>
       </tr>
-      <tr ng-repeat="(dirFile, dirFileType) in fileContents">
+      <tr ng-repeat="fileContent in fileContents | orderBy:'name' " >
         <td>
-          <a ng-href="#/file/{{ dirFile }}">
+          <a ng-href="#/file/{{ fileContent.name }}">
             <span class="glyphicon glyphicon-file"
-                  ng-if="dirFileType === 'file'"></span>
+                  ng-if="fileContent.type === 'file'"></span>
             <span class="glyphicon glyphicon-folder-open"
-                  ng-if="dirFileType === 'dir'"></span>
-            <span class="file-name">{{ basename(dirFile) }}</span>
+                  ng-if="fileContent.type === 'dir'"></span>
+            <span class="file-name">{{ basename(fileContent.name) }}</span>
           </a>
         </td>
       </tr>
