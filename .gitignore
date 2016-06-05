@@ -31,3 +31,4 @@ node_modules
 Goopfile.lock
 npm-debug.log
 bower_components
+coalahtml/_coalahtml/data/*
