@@ -16,7 +16,11 @@ angular.module('coalaHtmlApp')
         $scope.fileContents = [];
         $rootScope.FILES[fileName].forEach(function(file){
           var fileType = $rootScope.FILES.hasOwnProperty(file) ? "dir": "file";
-          $scope.fileContents.push({'name' : file, 'type' : fileType});
+          var resultFound = $rootScope.resultFiles[file] ? true : false;
+          $scope.fileContents.push({'name': file,
+                                    'type': fileType,
+                                    'result':resultFound});
+          console.log(resultFound + " " + file);
         });
       } else {
           $scope.fileType = "file";

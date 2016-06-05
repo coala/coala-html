@@ -32,6 +32,7 @@ angular.module('coalaHtmlApp')
             }
             $rootScope.resultsCount = resultsCount;
             $scope.data.push(knownFiles);
+            $rootScope.resultFiles = knownFiles;
         });
       };
 

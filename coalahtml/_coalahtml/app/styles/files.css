@@ -8,3 +8,7 @@
 .filename{
     color: blue;
 }
+.result-found{
+    float:right;
+    color: red;
+}

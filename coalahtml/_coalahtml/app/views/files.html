@@ -21,6 +21,8 @@
             <span class="glyphicon glyphicon-folder-open"
                   ng-if="fileContent.type === 'dir'"></span>
             <span class="file-name">{{ basename(fileContent.name) }}</span>
+            <span class="result-found" ng-if="fileContent.result">
+              <i class="glyphicon glyphicon-exclamation-sign" ></i></span>
           </a>
         </td>
       </tr>
