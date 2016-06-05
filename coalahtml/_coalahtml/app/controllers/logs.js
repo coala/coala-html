@@ -1,16 +1,11 @@
 'use strict';
 
 angular.module('coalaHtmlApp')
-  .controller('LogsCtrl', function ($scope, $http) {
-    var parseCoalaProject = function(projectDir, coalaJSON) {
-      coalaJSON = coalaJSON || projectDir + $scope.Constants.coala;
-      $scope.data = [];
-      $http.get(coalaJSON).success(function(response){
-        $scope.data = response.logs;
-      });
+  .controller('LogsCtrl', ['$scope', '$rootScope',
+    function ($scope, $rootScope) {
+    var parseCoalaProject = function() {
+      $scope.data = $rootScope.COALA_JSON.logs;
     };
-    $http.get("data/Constants.json").success(function(content) {
-      $scope.Constants = content;
-      parseCoalaProject($scope.Constants.data);
-    });
-  });
+
+    parseCoalaProject();
+  }]);

@@ -2,7 +2,7 @@
 
 describe('Prettyprint Directive', function() {
 
-  var element, scope;
+  var element, scope, $httpBackend;
   var codeHTML = '<pre ng-bind-html="undefined_variable"' +
                  '     class="prettyprint"></pre>';
   beforeEach(module('coalaHtmlApp'));
@@ -10,7 +10,25 @@ describe('Prettyprint Directive', function() {
     scope = $rootScope.$new();
     element = $compile(codeHTML)(scope);
   }));
-
+  beforeEach(inject(function ($injector) {
+    $httpBackend = $injector.get('$httpBackend');
+    $httpBackend.whenGET('data/Constants.json').respond(200, {
+      "data":"data",
+      "roothome":"data/roothome",
+      "file_data":"/file_data.json",
+      "files":"/files.json",
+      "coala":"/coala.json"
+    });
+    $httpBackend.whenGET('data/roothome').respond(200, {});
+    $httpBackend.whenGET('data/file_data.json').respond(200, {});
+    $httpBackend.whenGET('data/files.json').respond(200, {});
+    $httpBackend.whenGET('data/coala.json').respond(200, {});
+  }));
+  afterEach(function() {
+    $httpBackend.flush();
+    $httpBackend.verifyNoOutstandingExpectation();
+    $httpBackend.verifyNoOutstandingRequest();
+  });
   it('runs pretty print', function () {
     expect(element.find('span').length).to.equal(0);
     scope.$digest();

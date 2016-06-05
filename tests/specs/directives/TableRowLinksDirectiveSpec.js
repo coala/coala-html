@@ -2,7 +2,7 @@
 
 describe('TableRowLinks Directive', function() {
 
-  var element, scope, location;
+  var element, scope, location, $httpBackend;
   var codeHTML = '<table table-row-links>' +
                  '  <tr class="item1">' +
                  '    <td><a ng-click="item1Clicked = true" ' +
@@ -19,7 +19,25 @@ describe('TableRowLinks Directive', function() {
     location = $location;
     element = $compile(codeHTML)(scope);
   }));
-
+  beforeEach(inject(function ($injector) {
+    $httpBackend = $injector.get('$httpBackend');
+    $httpBackend.whenGET('data/Constants.json').respond(200, {
+      "data":"data",
+      "roothome":"data/roothome",
+      "file_data":"/file_data.json",
+      "files":"/files.json",
+      "coala":"/coala.json"
+    });
+    $httpBackend.whenGET('data/roothome').respond(200, {});
+    $httpBackend.whenGET('data/file_data.json').respond(200, {});
+    $httpBackend.whenGET('data/files.json').respond(200, {});
+    $httpBackend.whenGET('data/coala.json').respond(200, {});
+  }));
+  afterEach(function() {
+    $httpBackend.flush();
+    $httpBackend.verifyNoOutstandingExpectation();
+    $httpBackend.verifyNoOutstandingRequest();
+  });
   it('adds link to row', function () {
     scope.$digest();
     expect(angular.element(element[0].querySelector('.item1'))

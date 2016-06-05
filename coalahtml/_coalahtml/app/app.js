@@ -2,14 +2,29 @@
 
 angular
   .module('coalaHtmlApp', ['ngRoute', 'ngSanitize'])
-  .run(function($rootScope) {
+  .run(['$rootScope', '$http', function($rootScope, $http) {
     $rootScope.LOG_LEVELS = ["DEBUG", "INFO", "WARNING", "ERROR"];
     $rootScope.RESULT_SEVERITY = ["INFO", "NORMAL", "MAJOR"];
     $rootScope.SEVERITY_TO_BOOTSTRAP = ["info", "warning", "danger"];
     $rootScope.LOG_LEVEL_TO_BOOTSTRAP = ["primary", "info", "warning",
                                          "danger"];
-  })
-  .config(function ($routeProvider) {
+    $http.get("data/Constants.json").then(function(constants) {
+      $rootScope.CONSTANTS = constants.data;
+      $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.file_data)
+        .then(function(file_data) {
+          $rootScope.FILE_DATA = file_data.data;
+      });
+      $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.files)
+        .then(function(files) {
+          $rootScope.FILES = files.data;
+      });
+      $http.get($rootScope.CONSTANTS.roothome)
+        .then(function(roothome) {
+          $rootScope.ROOTHOME = roothome.data;
+      });
+    });
+  }])
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'app/views/main.html',
@@ -29,4 +44,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
