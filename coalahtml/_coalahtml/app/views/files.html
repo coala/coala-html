@@ -1,9 +1,13 @@
 <div class="files">
   <div class="dir-contents" ng-if="fileType === 'dir'">
     <h3>
-    Contents of <span class="filename">{{ fileName }}</span>
+      Contents of
+      <span ng-repeat= "file in getNameLink(fileName)" class="filename">
+        <a href="{{file.link}}">
+        {{file.name}}</a>
+      </span>
     </h3>
-    <table class="table table-striped table-bordered table-condensed"
+    <table class="table table-bordered table-condensed"
            table-row-links>
       <tr class="file-previous" ng-if="fileName !== ROOTHOME">
         <td>
@@ -31,9 +35,12 @@
   <div class="file-contents" ng-if="fileType === 'file'">
     <h3>
       Contents of
-      <span class="filename">{{ fileName }}</span>
+      <span ng-repeat= "file in getNameLink(fileName)" class="filename">
+        <a href="{{file.link}}">
+        {{file.name}}</a>
+      </span>
     </h3>
-    <table class="table table-striped table-bordered table-condensed"
+    <table class="table table-bordered table-condensed"
            table-row-links>
       <tr class="file-previous" ng-if="fileName !== ROOTHOME">
         <td>
