@@ -10,7 +10,7 @@ max_line_length = 90
 
 [css]
 files = coalahtml/_coalahtml/app/styles/*.css
-bears = LineLengthBear, SpaceConsistencyBear, CSSLintBear
+bears = LineLengthBear, SpaceConsistencyBear
 use_spaces = true
 
 [html]
