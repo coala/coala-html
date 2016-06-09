@@ -13,6 +13,14 @@
 .search-wrap {
     text-align: center;
 }
+.search{
+    padding: 3px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+}
 .result-badge, .file-badge, .log-badge {
     padding: 4px 5px;
     margin-left: 0.5em;
@@ -25,4 +33,31 @@
 }
 .log-badge {
     background-color: #888DC8;
+}
+.app-body{
+    margin-top: 100px;
+}
+/* Dark theme */
+body-dark{
+  background-color:rgba(66, 81, 76, 0.91);
+}
+.code-dark{
+    background-color: #E7E7E7;
+}
+.navbar-default-dark {
+  background-color: #484747;
+  border-color: transparent;
+}
+
+/* Light theme */
+body-light{
+  background-color:#BDE5A6;
+}
+.navbar-default-light {
+  background-color: rgba(168, 212, 142, 0.96);
+  border-color: transparent;
+}
+.code-light{
+  background-color: transparent;
+  border: 1px solid #112C02;
 }
