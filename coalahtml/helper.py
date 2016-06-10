@@ -84,7 +84,7 @@ def get_args():
                             const=True,
                             metavar='BOOL',
                             default=False,
-                            help='Launch webpage from existing results.')
+                            help='Launch webserver from existing results.')
     arg_parser.add_argument('--dir',
                             nargs='?',
                             metavar='FILE',
@@ -96,5 +96,5 @@ def get_args():
                             const=True,
                             metavar='BOOL',
                             default=False,
-                            help='Launch webpage')
+                            help='Do not launch webserver.')
     return arg_parser
