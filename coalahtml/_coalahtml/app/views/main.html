@@ -1,6 +1,3 @@
-<div class="search-wrap" ng-show="resultsCount">
-  <input ng-model="q" type="text" placeholder="Search" class="search"/>
-</div>
 <div ng-repeat="info in data">
   <div ng-repeat="(file, result) in info">
     <div class="code" ng-class="{'dark':!THEME}" ng-repeat="item in result | filter:q">
