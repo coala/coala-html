@@ -3,6 +3,26 @@
 angular.module('coalaHtmlApp')
   .controller('FilesCtrl',['$scope', '$routeParams', '$rootScope',
     function ($scope, $routeParams, $rootScope) {
+    $scope.basename = function(path_name) {
+      path_name = path_name || $rootScope.ROOTHOME;
+      return path_name.split('/').slice(-1)[0];
+    };
+    var getNameLink = function(fileName) {
+      var linkNameContainer = [], files = fileName.split('/');
+      var fileNameLen = files.length,
+          rootHomeLen = $rootScope.ROOTHOME.split('/').length;
+      var link = "#/file/" + $rootScope.ROOTHOME;
+
+      linkNameContainer.push({'name':'/','link':link});
+      for (var index = rootHomeLen; index < fileNameLen; index++) {
+        link = link + '/' + files[index];
+        linkNameContainer.push({
+          'name' : files[index] + (index < fileNameLen-1 ? '/' : ''),
+          'link' : link
+        });
+      }
+      $scope.linkNameContainer = linkNameContainer;
+    };
     var parseCoalaProject = function(fileName) {
       /* Expected file structure in filesJSON:
        * JSON object with keys as directory relative to the project
@@ -30,28 +50,9 @@ angular.module('coalaHtmlApp')
           });
           $scope.fileContents = result;
       }
+      getNameLink(fileName);
     };
+
     $scope.fileName = $routeParams.fileName || $rootScope.ROOTHOME;
     parseCoalaProject($scope.fileName);
-
-    $scope.basename = function(path_name) {
-      path_name = path_name || $rootScope.ROOTHOME;
-      return path_name.split('/').slice(-1)[0];
-    };
-    $scope.getNameLink = function(fileName) {
-      var linkNameContainer = [], files = fileName.split('/');
-      var fileNameLen = files.length,
-          rootHomeLen = $rootScope.ROOTHOME.split('/').length;
-      var link = "#/file/" + $rootScope.ROOTHOME;
-
-      linkNameContainer.push({'name':'/','link':link});
-      for (var index = rootHomeLen; index < fileNameLen; index++) {
-        link = link + '/' + files[index];
-        linkNameContainer.push({
-          'name' : files[index] + (index < fileNameLen-1 ? '/' : ''),
-          'link' : link
-        });
-      }
-      return linkNameContainer;
-    };
   }]);

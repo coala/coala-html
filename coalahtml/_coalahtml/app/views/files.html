@@ -2,7 +2,7 @@
   <div class="dir-contents" ng-if="fileType === 'dir'">
     <h3 ng-class="{'dark':!THEME}">
       Contents of
-      <span ng-repeat= "file in getNameLink(fileName)" class="filename">
+      <span ng-repeat= "file in linkNameContainer" class="filename">
         <a href="{{file.link}}">
         {{file.name}}</a>
       </span>
@@ -37,7 +37,7 @@
     <h3 ng-class="{'dark':!THEME}">
       Contents of
       <span ng-class="{'dark':!THEME}"
-        ng-repeat= "file in getNameLink(fileName)" class="filename">
+        ng-repeat= "file in linkNameContainer" class="filename">
         <a href="{{file.link}}">
         {{file.name}}</a>
       </span>
