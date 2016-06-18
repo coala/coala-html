@@ -1,6 +1,19 @@
+.highlight-line {
+    background: #9E5660 !important;
+}
 .dir-contents .file-name {
     margin-left: 5px;
     color: #196465 !important;
+}
+
+.diff-highlight{
+    background: #bda596 !important;
+}
+.msg-highlight{
+    color: #d75a98 !important;
+    font-family: monospace;
+    font-weight: 900;
+    background: transparent;
 }
 .table-row-link {
     cursor: pointer;
@@ -39,7 +52,7 @@ pre.dark li.L5,
 pre.dark li.L6,
 pre.dark li.L7,
 pre.dark li.L8,
-pre.dark li.L9 {background-color: #333 !important; }
+pre.dark li.L9 {background-color: #333; }
 
 
 /* Light */
@@ -73,7 +86,7 @@ li.L7,
 li.L8,
 li.L9 {
   padding-left: 1em;
-  background-color: #efebd6 !important;
+  background-color: #efebd6;
   list-style-type: decimal;
 }
  /* string content */

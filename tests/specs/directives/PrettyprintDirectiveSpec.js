@@ -3,11 +3,27 @@
 describe('Prettyprint Directive', function() {
 
   var element, scope, $httpBackend;
-  var codeHTML = '<pre ng-bind-html="undefined_variable"' +
-                 '     class="prettyprint"></pre>';
+  var codeHTML = '<pre ng-bind-html="fileContents"' +
+                 '     class="prettyprint linenums"></pre>';
   beforeEach(module('coalaHtmlApp'));
-  beforeEach(inject(function ($compile, $rootScope) {
+  beforeEach(inject(function ($compile, $rootScope, $routeParams) {
     scope = $rootScope.$new();
+    $rootScope.resultFiles = {"/home/Desktop/test.py" : [
+                              {"start": 1,
+                                "end": 1,
+                                "diffs": {"/home/Desktop/test.py": "diff"},
+                                "message": 'test',
+                                "origin": 'PEP8',
+                                "severity": 'NORMAL'
+                              },
+                              {"start": 2,
+                               "end": 2,
+                               "diffs": {"/home/Desktop/test.py": "diff"},
+                               "message": 'test',
+                               "origin": 'PEP8',
+                               "severity": 'NORMAL'}]};
+    $routeParams.fileName = "/home/Desktop/test.py";
+    scope.fileContents = "import this\nimport antigravity\n";
     element = $compile(codeHTML)(scope);
   }));
   beforeEach(inject(function ($injector) {
@@ -33,29 +49,23 @@ describe('Prettyprint Directive', function() {
     expect(element.find('span').length).to.equal(0);
     scope.$digest();
     expect(element.find('span').length).to.be.above(0);
-    expect(element[0].querySelector('.L0')).to.be.a('null');
-  });
+    var li0 = '<span class="kwd">import</span><span class="pln">'+
+              ' </span><span class="kwd">this</span>';
+    var li1 = '<span class="kwd">import</span>'+
+              '<span class="pln"> antigravity</span>';
+    var resultInfo = 'test<span class="msg-highlight">test</span>'+
+                     '<pre class="diff-highlight">diff</pre>';
 
-  it('runs pretty print without linenums', function () {
-    expect(element[0].querySelector('.L0')).to.be.a('null');
-    scope.$digest();
-    expect(element[0].querySelector('.L0')).to.be.a('null');
+    expect(element[0].querySelector('.L0').innerHTML).to.equal(li0);
+    expect(element[0].querySelector('.L1').innerHTML).to.equal(li1);
+    expect(element[0].querySelector('ol').children[1].innerHTML).to.equal(resultInfo);
   });
-
-  it('runs pretty print with linenums', function () {
-    element.addClass("linenums");
+  it('runs pretty print with linenums:XX', function () {
+    element.addClass("linenums:0");
 
     expect(element[0].querySelector('.L0')).to.be.a('null');
     scope.$digest();
     expect(element[0].querySelector('.L0')).to.not.be.a('null');
-  });
-
-  it('runs pretty print with linenums:XX', function () {
-    element.addClass("linenums:5");
-
-    expect(element[0].querySelector('.L4')).to.be.a('null');
-    scope.$digest();
-    expect(element[0].querySelector('.L4')).to.not.be.a('null');
   });
 
 });
