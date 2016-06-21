@@ -32,6 +32,18 @@ If you want to learn more about coala, its functionality and its usage,
 please take a look at our
 `tutorial <http://coala.readthedocs.org/en/latest/Getting_Involved/README.html>`__.
 
+PROJECT STATUS
+--------------
++------------------+---------------+
+| Build Status     | Coverage      |
++==================+===============+
+| |Travis|         | |Coverage|    |
++------------------+---------------+
+
+DEMO
+----
+GIF_.  Live_.
+
 GETTING INVOLVED
 ================
 
@@ -63,3 +75,9 @@ your option) any later version.
    :target: https://gitter.im/coala-analyzer/coala
 .. |AGPL| image:: https://img.shields.io/github/license/coala-analyzer/coala.svg
    :target: https://www.gnu.org/licenses/agpl-3.0.html
+.. |Travis| image:: https://img.shields.io/travis/coala-analyzer/coala-html/master.svg?maxAge=2592000
+   :target: https://github.com/coala-analyzer/coala-html
+.. |Coverage| image:: https://img.shields.io/codecov/c/github/coala-analyzer/coala-html/master.svg
+   :target: https://codecov.io/github/coala-analyzer/coala-html?branch=master
+.. _GIF: https://cloud.githubusercontent.com/assets/7397433/16225501/8162a2a4-37c4-11e6-96b8-3e37b705c7f3.gif
+.. _Live: http://coala-analyzer.github.io/coala-html
