@@ -1,51 +1,40 @@
 'use strict';
 
 angular.module('coalaHtmlApp')
-  .controller('MainCtrl', function ($scope, $http) {
-    var parseCoalaProject = function(projectDir, coalaJSON) {
-      coalaJSON = coalaJSON || projectDir + '/coala.json';
-      $scope.data = [];
-      $http.get(coalaJSON).success(function(response){
+  .controller('MainCtrl',["$scope", "$rootScope", "$http",
+    function($scope, $rootScope, $http) {
+    var parseCoalaProject = function() {
+        $scope.data = [];
         var knownFiles = {};
-        $scope.content = {};
-
-        var parseResult = function(el){
-          var sourceRange = el.affected_code[0];
-          if (!(sourceRange.file in knownFiles)){
+        var parseResult = function(result) {
+          result.affected_code.forEach(function(sourceRange) {
+            if (!(sourceRange.file in knownFiles)) {
               knownFiles[sourceRange.file] = [];
-
-              $http.get(projectDir + "/" + sourceRange.file)
-                .success(function(content) {
-                  $scope.content[sourceRange.file] = content.split("\n");
-                });
-          }
-          knownFiles[sourceRange.file].push({
-            "start":    sourceRange.start.line,
-            "end":      sourceRange.end.line,
-            "diffs":    el.diffs,
-            "message":  el.message,
-            "origin":   el.origin,
-            "severity": el.severity
+            }
+            knownFiles[sourceRange.file].push({
+              "start":    sourceRange.start.line,
+              "end":      sourceRange.end.line,
+              "diffs":    result.diffs,
+              "message":  result.message,
+              "origin":   result.origin,
+              "severity": result.severity
+            });
           });
         };
+        $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.coala)
+          .then(function(coala_json) {
+            $rootScope.COALA_JSON = coala_json.data;
+            $rootScope.logsCount = coala_json.data.logs.length;
+            var resultsCount = 0;
+            for (var section in $rootScope.COALA_JSON.results) {
+              $rootScope.COALA_JSON.results[section].forEach(parseResult);
+              resultsCount += $rootScope.COALA_JSON.results[section].length;
+            }
+            $rootScope.resultsCount = resultsCount;
+            $scope.data.push(knownFiles);
+            $rootScope.resultFiles = knownFiles;
+        });
+      };
 
-        for (var errors in response.results) {
-          if (response.results[errors][0]){ // If error exists
-              response.results[errors].forEach(parseResult);
-          }
-        }
-
-        $scope.data.push(knownFiles);
-      });
-    };
-    parseCoalaProject("tests/test_projects/simple");
-
-    $scope.range = function(min, max, step) {
-      step = step || 1;
-      var input = [];
-      for (var i = min; i <= max; i += step) {
-        input.push(i);
-      }
-      return input;
-    };
-  });
+    parseCoalaProject();
+  }]);

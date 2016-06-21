@@ -12,10 +12,17 @@
           href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet"
           href="bower_components/google-code-prettify/src/prettify.css">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet"
+          href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet"
+          href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
 
     <link rel="stylesheet" href="app/styles/main.css">
     <link rel="stylesheet" href="app/styles/logs.css">
     <link rel="stylesheet" href="app/styles/files.css">
+    <script
+      src="bower_components/jquery/dist/jquery.min.js"></script>
     <style>
     body {
       font-family: Lato, sans-serif;
@@ -25,7 +32,7 @@
     }
     </style>
   </head>
-  <body ng-app="coalaHtmlApp">
+  <body ng-class="{'dark':!THEME}" ng-app="coalaHtmlApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -36,10 +43,10 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
+      <div ng-class="{'dark':!THEME}" class="navbar navbar-default navbar-fixed-top "
+           role="navigation">
         <div class="container">
           <div class="navbar-header">
-
             <button type="button" class="navbar-toggle collapsed"
                     data-toggle="collapse" data-target="#js-navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -47,24 +54,49 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-
             <a class="navbar-brand" href="#/">coala-html</a>
           </div>
-
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
             <ul bs-nav-active class="nav navbar-nav">
-              <li><a href="#/">Results</a></li>
-              <li><a href="#/file/">Files</a></li>
-              <li><a href="#/logs">Logs</a></li>
+              <li>
+                <a href="#/">Results
+                  <span ng-if="resultsCount" class = "result-badge badge">
+                    {{ resultsCount }}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#/file/">Files
+                  <span ng-if="filesCount" class = "file-badge badge">
+                    {{ filesCount }}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#/logs">Logs
+                  <span ng-if="logsCount" class = "log-badge badge">
+                    {{ logsCount }}
+                  </span>
+                </a>
+              </li>
+              <li class="form-group label-floating" ng-show="resultsCount" >
+                  <label for="search" class="control-label">Search</label>
+                  <input class="form-control" id="search" ng-model="q" type="text" />
+              </li>
             </ul>
           </div>
+        </div>
+        <div class="togglebutton">
+          <label>
+            <span class="theme-type">{{THEME ? "Light" : "Dark"}}</span>
+            <input ng-model="THEME" type="checkbox"  />
+          </label>
         </div>
       </div>
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+    <div class="app-body" ng-view=""></div>
     </div>
 
     <script src="bower_components/angular/angular.js"></script>
@@ -73,11 +105,17 @@
       src="bower_components/google-code-prettify/src/prettify.js"></script>
     <script
       src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-
+    <script
+      src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script
+      src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/directives.js"></script>
     <script src="app/controllers/main.js"></script>
     <script src="app/controllers/logs.js"></script>
     <script src="app/controllers/files.js"></script>
+    <script type="text/javascript">
+      $.material.init();
+    </script>
   </body>
 </html>

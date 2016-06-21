@@ -1,38 +1,58 @@
 'use strict';
 
 angular.module('coalaHtmlApp')
-  .controller('FilesCtrl', function ($scope, $http, $routeParams) {
-    var parseCoalaProject = function(fileName, projectDir, filesJSON) {
+  .controller('FilesCtrl',['$scope', '$routeParams', '$rootScope',
+    function ($scope, $routeParams, $rootScope) {
+    $scope.basename = function(path_name) {
+      path_name = path_name || $rootScope.ROOTHOME;
+      return path_name.split('/').slice(-1)[0];
+    };
+    var getNameLink = function(fileName) {
+      var linkNameContainer = [], files = fileName.split('/');
+      var fileNameLen = files.length,
+          rootHomeLen = $rootScope.ROOTHOME.split('/').length;
+      var link = "#/file/" + $rootScope.ROOTHOME;
+
+      linkNameContainer.push({'name':'/','link':link});
+      for (var index = rootHomeLen; index < fileNameLen; index++) {
+        link = link + '/' + files[index];
+        linkNameContainer.push({
+          'name' : files[index] + (index < fileNameLen-1 ? '/' : ''),
+          'link' : link
+        });
+      }
+      $scope.linkNameContainer = linkNameContainer;
+    };
+    var parseCoalaProject = function(fileName) {
       /* Expected file structure in filesJSON:
        * JSON object with keys as directory relative to the project
        * path and values are files inside directory relative to the
        * project.
-       * For files in the project root, the key should be "".
+       * For files in the project root, the key should be root.
        */
-      filesJSON = filesJSON || projectDir + '/files.json';
-      $scope.data = [];
       $scope.fileBack = fileName.split("/").slice(0, -1).join('/');
-
-      $http.get(filesJSON).success(function(fileData){
-        if (fileData.hasOwnProperty(fileName)) {
-          $scope.fileType = "dir";
-          $scope.fileContents = {};
-          for(var i_file = 0; i_file < fileData[fileName].length; i_file += 1) {
-            var dirFile = fileData[fileName][i_file];
-            var dirFileType = fileData.hasOwnProperty(dirFile) ? "dir": "file";
-            $scope.fileContents[dirFile] = dirFileType;
-          }
-        } else {
+      if ($rootScope.FILES.hasOwnProperty(fileName)) {
+        $scope.fileType = "dir";
+        $scope.fileContents = [];
+        $rootScope.FILES[fileName].forEach(function(file){
+          var fileType = $rootScope.FILES.hasOwnProperty(file) ? "dir": "file";
+          var resultFound = $rootScope.resultFiles[file] ? true : false;
+          $scope.fileContents.push({'name': file,
+                                    'type': fileType,
+                                    'result':resultFound});
+          console.log(resultFound + " " + file);
+        });
+      } else {
           $scope.fileType = "file";
-          $http.get(projectDir + "/" + fileName)
-            .success(function(content) {
-              $scope.fileContents = content;
-            });
-        }
-        $scope.data = fileData;
-      });
+          var result = "";
+          $rootScope.FILE_DATA[fileName].forEach(function(line){
+            result += line;
+          });
+          $scope.fileContents = result;
+      }
+      getNameLink(fileName);
     };
 
-    $scope.fileName = $routeParams.fileName || "";
-    parseCoalaProject($scope.fileName, "tests/test_projects/simple");
-  });
+    $scope.fileName = $routeParams.fileName || $rootScope.ROOTHOME;
+    parseCoalaProject($scope.fileName);
+  }]);

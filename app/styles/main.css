@@ -10,6 +10,86 @@
     color: #269E37;
     margin-left: 5px;
 }
-.search-wrap {
-    text-align: center;
+.control-label, .help-block {
+  color:#88c88d !important;
+}
+
+#search {
+  color:white;
+}
+.form-group{
+  margin: 2px !important;
+  margin-top:6px !important;
+  margin-left:50px !important;
+
+}
+.result-badge, .file-badge, .log-badge {
+    padding: 4px 5px;
+    margin-left: 0.5em;
+}
+.result-badge {
+    background-color: #CE6F40;
+}
+.file-badge {
+    background-color: #88C88D;
+}
+.log-badge {
+    background-color: #888DC8;
+}
+.app-body{
+    margin-top: 100px;
+}
+/* Light theme */
+body {
+  background-color:#ccdcc3;
+}
+.navbar-default {
+  background-color: rgba(168, 212, 142, 0.96);
+  border-color: transparent;
+}
+.code {
+  background-color: rgb(244, 251, 233);
+  border: 1px solid #112C02;
+}
+/* Dark theme */
+span.message.dark {
+  color: #ffe4c4 !important;
+}
+span.origin.dark {
+  color: #65f1f3 !important;
+}
+span.text-primary.dark {
+  color: #97e985 !important;
+}
+
+body.dark, div.code.dark {
+  background-color:rgba(66, 81, 76, 0.91) !important;
+}
+div.navbar.dark {
+  background-color: #484747 !important;
+  border-color: transparent !important;
+}
+span.file-name.dark{
+  color:#51e1d3 !important;
+}
+h3.dark{
+  color:#bce4e7; !important;
+}
+.theme-type {
+  color:white;
+  padding: 5px;
+}
+.togglebutton{
+  position: fixed;
+  top: 3%;
+  right: 2%;
+}
+.togglebutton label input[type=checkbox]:checked {
+  background-color: #BDE5A6;
+}
+.togglebutton label input[type=checkbox]:checked + .toggle {
+  background-color: white;
+}
+.togglebutton label .toggle {
+  background-color: rgb(216, 243, 220);
 }

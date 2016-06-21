@@ -1,4 +1,0 @@
-{
-    "": ["test.py", "test_dir"],
-    "test_dir": ["test_dir/inner_test.py"]
-}

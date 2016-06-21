@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('coalaHtmlApp')
-  .directive('prettyprint', function() {
+  .directive('prettyprint',["$routeParams", "$rootScope",
+    function($routeParams, $rootScope) {
     return {
       priority: 10,  // Decrease priority so it's run after ngBindHtml
       restrict: 'C',
@@ -13,15 +14,37 @@ angular.module('coalaHtmlApp')
           var elementClasses = element[0].className;
           var lineNumClass = elementClasses.match(/\blinenums\b(?::(\d+))?/);
           var lineNums = Boolean(lineNumClass);
-          if (lineNumClass[1] && lineNumClass[1].length > 0) {
+          if (lineNumClass && lineNumClass[1] && lineNumClass[1].length > 0) {
             lineNums = +lineNumClass[1];  // Convert to integer
           }
-
           element.html(prettyPrintOne(newValue, '', lineNums));
+
+          // Idea is to create elements dynamically and append to the code block.
+          var highlightLineClass = "highlight-line";
+          var ol = element[0].getElementsByTagName('ol')[0];
+          var lines = ol.children, linesCount = lines.length;
+          $rootScope.resultFiles[$routeParams.fileName].forEach(function(result) {
+            for(var index=result.start-1; index<result.end; index++) {
+              lines[index].classList.add(highlightLineClass);
+            }
+            var diffPre = document.createElement('pre');
+            var msgSpan = document.createElement('span');
+            diffPre.classList.add('diff-highlight');
+            msgSpan.classList.add('msg-highlight');
+            diffPre.innerHTML = result.diffs[$routeParams.fileName];
+            msgSpan.innerHTML = result.message;
+            if(result.end-linesCount===0) {
+              lines[result.end-1].appendChild(msgSpan);
+              lines[result.end-1].appendChild(diffPre);
+            } else {
+              ol.insertBefore(diffPre, lines[result.end]);
+              ol.insertBefore(msgSpan, lines[result.end]);
+            }
+          });
         });
       }
     };
-  })
+  }])
   .directive('bsNavActive', function($location) {
     return {
       restrict: 'A',

@@ -1,9 +1,15 @@
 <div class="files">
   <div class="dir-contents" ng-if="fileType === 'dir'">
-    <h3>Contents of {{ fileName !== '' ? fileName : "[root]" }}</h3>
-    <table class="table table-striped table-bordered table-condensed"
+    <h3 ng-class="{'dark':!THEME}">
+      Contents of
+      <span ng-repeat= "file in linkNameContainer" class="filename">
+        <a href="{{file.link}}">
+        {{file.name}}</a>
+      </span>
+    </h3>
+    <table class="table table-bordered table-condensed"
            table-row-links>
-      <tr class="file-previous" ng-if="fileName !== ''">
+      <tr class="file-previous" ng-if="fileName !== ROOTHOME">
         <td>
           <a ng-href="#/file/{{ fileBack }}">
             <span class="glyphicon glyphicon-arrow-left"></span>
@@ -11,24 +17,34 @@
           </a>
         </td>
       </tr>
-      <tr ng-repeat="(dirFile, dirFileType) in fileContents">
+      <tr ng-repeat="fileContent in fileContents | filter:q | orderBy:'name' " >
         <td>
-          <a ng-href="#/file/{{ dirFile }}">
+          <a ng-href="#/file/{{ fileContent.name }}">
             <span class="glyphicon glyphicon-file"
-                  ng-if="dirFileType === 'file'"></span>
+                  ng-if="fileContent.type === 'file'"></span>
             <span class="glyphicon glyphicon-folder-open"
-                  ng-if="dirFileType === 'dir'"></span>
-            <span class="file-name">{{ dirFile }}</span>
+                  ng-if="fileContent.type === 'dir'"></span>
+            <span ng-class="{'dark':!THEME}"
+                  class="file-name">{{ basename(fileContent.name) }}</span>
+            <span class="result-found" ng-if="fileContent.result">
+              <i class="glyphicon glyphicon-exclamation-sign" ></i></span>
           </a>
         </td>
       </tr>
     </table>
   </div>
   <div class="file-contents" ng-if="fileType === 'file'">
-    <h3>Contents of {{ fileName }}</h3>
-    <table class="table table-striped table-bordered table-condensed"
+    <h3 ng-class="{'dark':!THEME}">
+      Contents of
+      <span ng-class="{'dark':!THEME}"
+        ng-repeat= "file in linkNameContainer" class="filename">
+        <a href="{{file.link}}">
+        {{file.name}}</a>
+      </span>
+    </h3>
+    <table class="table table-bordered table-condensed"
            table-row-links>
-      <tr class="file-previous" ng-if="fileName !== ''">
+      <tr class="file-previous" ng-if="fileName !== ROOTHOME">
         <td>
           <a ng-href="#/file/{{ fileBack }}">
             <span class="glyphicon glyphicon-arrow-left"></span>
@@ -37,6 +53,8 @@
         </td>
       </tr>
     </table>
-    <pre ng-bind-html="fileContents" class="prettyprint linenums"></pre>
+    <pre ng-bind-html="fileContents"
+    ng-class="{'dark':!THEME}"
+    class="prettyprint linenums"></pre>
   </div>
 </div>
