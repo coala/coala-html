@@ -44,6 +44,14 @@ DEMO
 ----
 GIF_.  Live_.
 
+INSTALLATION
+------------
+``pip3 install coala-html``
+
+USAGE
+-----
+`coala-html -h`
+
 GETTING INVOLVED
 ================
 
