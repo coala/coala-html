@@ -61,11 +61,12 @@ describe('Prettyprint Directive', function() {
     expect(element[0].querySelector('ol').children[1].innerHTML).to.equal(resultInfo);
   });
   it('runs pretty print with linenums:XX', function () {
-    element.addClass("linenums:0");
+    element.removeClass("linenums");
+    element.addClass("linenums:3");
 
-    expect(element[0].querySelector('.L0')).to.be.a('null');
+    expect(element[0].querySelector('.L2')).to.be.a('null');
     scope.$digest();
-    expect(element[0].querySelector('.L0')).to.not.be.a('null');
+    expect(element[0].querySelector('.L2')).to.not.be.a('null');
   });
 
 });
