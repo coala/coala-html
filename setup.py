@@ -55,7 +55,7 @@ if __name__ == "__main__":
               "console_scripts": [
                   "coala-html = coalahtml.coala_html:main"]},
           classifiers=[
-              'Development Status :: 4 - Alpha',
+              'Development Status :: 4 - Beta',
 
               'Environment :: Console',
 
