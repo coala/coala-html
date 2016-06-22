@@ -1,2 +1,2 @@
 coala-decorators
-coala-bears
+coala==0.7
