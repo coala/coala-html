@@ -81,8 +81,12 @@ def main():
                 sys.exit(1)
 
         Handler = http.server.SimpleHTTPRequestHandler
+        socketserver.TCPServer.allow_reuse_address = True
         httpd = socketserver.TCPServer(("", Constants.PORT), Handler)
         print("serving at ", Constants.URL)
         print("Press Ctrl+C to end the coala-html session")
-        httpd.serve_forever()
         webbrowser.open(Constants.URL, new=2)
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            httpd.server_close()
