@@ -1,18 +1,15 @@
+import os
 import unittest
 
 from coalahtml.tree import Node, Tree
-from coalib.coala_main import run_coala
-from coalib.output.printers.ListLogPrinter import ListLogPrinter
-from coalahtml.helper import parse_file_dict
 
 
 class TreeTest(unittest.TestCase):
 
     def setUp(self):
-        log_printer = ListLogPrinter()
-        file_dict = run_coala(log_printer=log_printer,
-                              autoapply=False)[2]
-        self.FL = list(parse_file_dict(file_dict).keys())
+        self.FL = []
+        for root, _, file_list in os.walk(os.path.abspath('tests')):
+            self.FL.extend(os.path.join(root, fname) for fname in file_list)
 
     def test_node(self):
         node = Node(self.FL[0])
@@ -25,5 +22,5 @@ class TreeTest(unittest.TestCase):
 
     def test_graph(self):
         tr = Tree(self.FL)
-        testChild = tr.root.child['tests'].child.get('specs', None)
-        self.assertTrue(testChild)
+        testChild = tr.root.child.keys()
+        self.assertCountEqual(testChild, os.listdir('tests'))
