@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import sys
 import unittest
 
 from coalahtml.helper import (get_file, parse_file_dict, build_file_graph,
@@ -10,6 +11,8 @@ from coalahtml.helper import (get_file, parse_file_dict, build_file_graph,
 class coalaHelperTest(unittest.TestCase):
 
     def setUp(self):
+        self.old_argv = sys.argv
+        sys.argv = ['coala']  # mock the entry point
         self.dir_name = "someRandomName"
         self.test_dir_path = os.path.abspath(self.dir_name)
         self.file_name = self.dir_name[::2]
@@ -19,6 +22,9 @@ class coalaHelperTest(unittest.TestCase):
         self.test_file_dict = {test_section: {
             test_file_name: (test_file_content)}}
         self.test_file_data = {test_file_name: test_file_content}
+
+    def tearDown(self):
+        sys.argv = self.old_argv
 
     def test_get_file(self):
         test_file_path = os.path.abspath(os.path.join(self.test_dir_path,
