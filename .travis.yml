@@ -28,6 +28,7 @@ before_install:
 
 script:
   - npm test
+  - python3 -m pytest --cov
   - bash <(curl -s https://codecov.io/bash)
   - coala
 
