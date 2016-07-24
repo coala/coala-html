@@ -1,7 +1,10 @@
 import os
 import re
+import shutil
+import socketserver
 import sys
 import unittest
+from unittest.mock import patch
 
 from coalahtml import Constants
 from coalahtml.helper import get_file
@@ -21,8 +24,30 @@ class coalaHTMLTest(unittest.TestCase):
 
     def tearDown(self):
         sys.argv = self.old_argv
+        """
+        Before launching the server, we `chdir` to angular app i.e
+        `coalahtmlapp` in coala_html.main. So we need to reset this so
+        that other tests can run fine.
+        """
+        os.chdir(os.path.dirname(os.path.dirname(__file__)))
+        shutil.rmtree('coalahtmlapp', ignore_errors=True)
 
-    def test_output_file(self):
+    @patch.object(socketserver.TCPServer, 'serve_forever', autospec=True)
+    @patch.object(socketserver.TCPServer, 'server_close', autospec=True)
+    @patch('coalahtml.coala_html.call')
+    @patch('webbrowser.open')
+    def test_noupdate(self, mock_browser,
+                      mock_subprocess_call,
+                      mock_server_close,
+                      mock_serve_forever):
+        """
+        Test that when JSON configs are already generated, coala-html
+        with 'noupdate' option will run successfully and not update existing
+        configuration. Also, we mock the expensive http calls and instantiating
+        the server by mocking the corresponding method calls.
+        """
+        mock_serve_forever.side_effect = KeyboardInterrupt
+        mock_subprocess_call.return_value = 0  # To mock the `bower install`
         update_file = ""
         noupdate_file = ""
         with prepare_file(["#todo this is todo"], None) as (lines, filename):
@@ -32,6 +57,7 @@ class coalaHTMLTest(unittest.TestCase):
                           "-b", "LineCountBear",
                           "-f", re.escape(filename),
                           "--nolaunch")
+
             with open(self.result_file, 'r') as fp:
                 update_file = fp.read()
 
@@ -40,10 +66,12 @@ class coalaHTMLTest(unittest.TestCase):
                           "-c", os.devnull,
                           "-b", "LineCountBear",
                           "-f", re.escape(filename),
-                          "--noupdate",
-                          "--nolaunch")
+                          "--noupdate")
 
             with open(self.result_file, 'r') as fp:
                 noupdate_file = fp.read()
 
         self.assertEqual(update_file, noupdate_file)
+        self.assertTrue(mock_browser.called)
+        self.assertTrue(mock_serve_forever.called)
+        self.assertTrue(mock_server_close.called)
