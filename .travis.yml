@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 
-language: node_js
+language: python
 node_js:
   - "4.1"
 python:
@@ -13,9 +13,9 @@ cache:
     - node_modules
     - coalahtml/_coalahtml/bower_components
 
-before_install:
+install:
   - sudo apt-get -y install python3-pip python-dev
-  - sudo pip3 install -U pip setuptools
+  - pip install -U pip setuptools
   - npm install -g bower
   - npm install
   - cd coalahtml/_coalahtml
@@ -23,12 +23,13 @@ before_install:
   - cd -
   # colorama needs to be upgraded to fix error when installed colorama 
   # version and required are different.
-  - sudo pip3 install colorama==0.3.7
-  - sudo pip3 install -r requirements.txt
+  - pip install colorama==0.3.7
+  - pip install -r requirements.txt
+  - pip install -r test-requirements.txt
 
 script:
   - npm test
-  - python3 -m pytest --cov
+  - python -m pytest --cov
   - bash <(curl -s https://codecov.io/bash)
   - coala
 
