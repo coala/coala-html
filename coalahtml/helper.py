@@ -49,10 +49,8 @@ def create_dir(path: str):
         directory path or None id mkdir fails
     '''
     if not os.path.exists(path):
-        try:
-            os.mkdir(path, mode=0o775)
-        except OSError as e:
-            print(e)
+        os.mkdir(path, mode=0o775)
+
     return os.path.abspath(path)
 
 
