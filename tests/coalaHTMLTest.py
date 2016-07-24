@@ -1,5 +1,6 @@
 import os
 import re
+import shutil
 import sys
 import unittest
 
@@ -47,3 +48,4 @@ class coalaHTMLTest(unittest.TestCase):
                 noupdate_file = fp.read()
 
         self.assertEqual(update_file, noupdate_file)
+        shutil.rmtree('coalahtmlapp', ignore_errors=True)
