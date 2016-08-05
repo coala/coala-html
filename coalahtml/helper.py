@@ -71,7 +71,7 @@ def copy_files(src, dst):
                 shutil.copytree(s, d)
             else:
                 shutil.copy2(s, d)
-        except FileExistsError:
+        except FileExistsError:  # pragma: no cover
             pass
 
 
