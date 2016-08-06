@@ -13,6 +13,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import http.server
+import itertools
 import json
 import os
 import socketserver
@@ -29,13 +30,33 @@ from coalib.output.JSONEncoder import create_json_encoder
 from coalib.output.printers.ListLogPrinter import ListLogPrinter
 
 
+def gen_file_set(dirpath):
+    """
+    Parse an output from `os.walk` and create a set of its contents.
+    :param dirpath:
+        Source directory.
+    :return:
+        A set of directory contents traversed recursively.
+    """
+    content_set = set()
+    for root, dir_list, file_list in os.walk(dirpath):
+        content_set.add(root)
+        for file_name in itertools.chain(dir_list, file_list):
+            content_set.add(file_name)
+
+    return content_set
+
+
 def main():
     arg_parser = get_args()
     args = arg_parser.parse_args()
 
     dir_path = create_dir(os.path.abspath(args.dir))
 
-    if len(list(os.walk(dir_path))) > 0:  # pragma: no cover
+    main_package = gen_file_set(get_file(Constants.COALA_HTML_BASE))
+    local_package = gen_file_set(dir_path)
+
+    if not main_package.issubset(local_package):  # pragma: no cover
         copy_files(get_file(Constants.COALA_HTML_BASE), dir_path)
 
     if not args.noupdate:
