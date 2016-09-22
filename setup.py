@@ -38,7 +38,7 @@ if __name__ == "__main__":
           maintainer="Tushar Gautam"
                       if not on_rtd else "L.S., F.N., M.K.",
           maintainer_email=('tushar.rishav@gmail.com'),
-          url='http://coala-analyzer.org/',
+          url='http://coala.io/',
           platforms='any',
           packages=find_packages(exclude=["build.*", "tests", "tests.*"]),
           install_requires=required,
