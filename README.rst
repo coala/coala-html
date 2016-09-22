@@ -61,7 +61,7 @@ Involved Information
 
 We appreciate any help!
 
-|https://gitter.im/coala-analyzer/coala|
+|https://gitter.im/coala/coala|
 
 BUILD & DEVELOPMENT
 -------------------
@@ -79,13 +79,13 @@ This code falls under the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or (at
 your option) any later version.
 
-.. |https://gitter.im/coala-analyzer/coala| image:: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
-   :target: https://gitter.im/coala-analyzer/coala
-.. |AGPL| image:: https://img.shields.io/github/license/coala-analyzer/coala.svg
+.. |https://gitter.im/coala/coala| image:: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
+   :target: https://gitter.im/coala/coala
+.. |AGPL| image:: https://img.shields.io/github/license/coala/coala.svg
    :target: https://www.gnu.org/licenses/agpl-3.0.html
-.. |Travis| image:: https://img.shields.io/travis/coala-analyzer/coala-html/master.svg?maxAge=2592000
-   :target: https://github.com/coala-analyzer/coala-html
-.. |Coverage| image:: https://img.shields.io/codecov/c/github/coala-analyzer/coala-html/master.svg
-   :target: https://codecov.io/github/coala-analyzer/coala-html?branch=master
+.. |Travis| image:: https://img.shields.io/travis/coala/coala-html/master.svg?maxAge=2592000
+   :target: https://github.com/coala/coala-html
+.. |Coverage| image:: https://img.shields.io/codecov/c/github/coala/coala-html/master.svg
+   :target: https://codecov.io/github/coala/coala-html?branch=master
 .. _GIF: https://cloud.githubusercontent.com/assets/7397433/16225501/8162a2a4-37c4-11e6-96b8-3e37b705c7f3.gif
-.. _Live: http://coala-analyzer.github.io/coala-html
+.. _Live: http://coala.github.io/coala-html
