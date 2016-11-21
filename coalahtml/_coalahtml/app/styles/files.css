@@ -36,8 +36,10 @@ pre.dark .typ { color: #98fb98 } /* type    - lightgreen */
 pre.dark .lit { color: #cd5c5c } /* literal - darkred */
 pre.dark .pun { color: #fff }    /* punctuation */
 pre.dark .pln { color: #fff }    /* plaintext */
+/* Start ignoring LineLengthBear */
 pre.dark .tag { color: #f0e68c; font-weight: bold } /* html tag - lightyellow */
 pre.dark .atn { color: #bdb76b; font-weight: bold } /* attribute name - khaki */
+/* Stop ignoring */
 pre.dark .atv { color: #ffa0a0 } /* attribute value - pink */
 pre.dark .dec { color: #98fb98 } /* decimal - lightgreen */
 
