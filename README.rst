@@ -44,6 +44,10 @@ DEMO
 ----
 GIF_.  Live_.
 
+DEMO PAGE
+---------
+.. image:: https://s11.postimg.org/u2vemkqrn/coala_Demo_Screenshot.png 
+
 INSTALLATION
 ------------
 ``pip3 install coala-html``
