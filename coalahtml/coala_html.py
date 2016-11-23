@@ -62,7 +62,7 @@ def main():
     if not args.noupdate:
         log_printer = ListLogPrinter()
         results, exitcode, file_dict = run_coala(
-            log_printer=log_printer, autoapply=False, arg_parser=arg_parser)
+            log_printer=log_printer, arg_parser=arg_parser)
 
         result_data = {"results": results}
         result_data["logs"] = log_printer.logs
