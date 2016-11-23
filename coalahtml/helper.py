@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from coala_decorators.decorators import enforce_signature
+from coala_utils.decorators import enforce_signature
 from coalib.parsing.DefaultArgParser import default_arg_parser
 from coalahtml import Constants
 from coalahtml.tree import Tree
