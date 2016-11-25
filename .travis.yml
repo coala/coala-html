@@ -33,6 +33,10 @@ install:
   - pip install -r test-requirements.txt
 
 script:
+  - >
+    if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
+        sed -i.bak '/bears = GitCommitBear/d' .coafile
+    fi
   - npm test
   - python -m pytest --cov
   - codecov
