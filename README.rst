@@ -32,6 +32,10 @@ If you want to learn more about coala, its functionality and its usage,
 please take a look at our
 `tutorial <http://coala.readthedocs.org/en/latest/Getting_Involved/README.html>`__.
 
+REPORT
+------
+.. image:: https://s11.postimg.org/u2vemkqrn/coala_Demo_Screenshot.png
+
 PROJECT STATUS
 --------------
 +------------------+---------------+
