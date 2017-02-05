@@ -95,13 +95,13 @@ li.L7,
 li.L8,
 li.L9 {
   padding-left: 1em;
-  background-color: #efebd6;
+  background-color: black !important;
   list-style-type: decimal;
 }
  /* string content */
 .str {   color: #60ac39; }
 /* keyword */
-.kwd {   color: #b854d4; }
+.kwd {   color: lightblue; font-weight: bold}
 /* comment */
 .com {   color: #999580; }
 /* type name */
@@ -109,15 +109,15 @@ li.L9 {
 /* literal value */
 .lit {   color: #b65611; }
 /* punctuation */
-.pun {   color: #20201d; }
+.pun {   color: white; }
 /* lisp open bracket */
-.opn {   color: #20201d; }
+.opn {   color: white; }
 /* lisp close bracket */
-.clo {   color: #20201d; }
+.clo {   color: white; }
 /* markup tag name */
-.tag {   color: #d7337; }
+.tag {   color: #d7337; font-weight: bold}
 /* markup attribute name */
-.atn {   color: #b65611; }
+.atn {   color: #b65611; font-weight: bold}
 /* markup attribute value */
 .atv {   color: #1fad83;
 /* declaration */
