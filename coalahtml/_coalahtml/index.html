@@ -45,11 +45,16 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="main-content">
     <div class="header">
       <div ng-class="{'dark':!THEME}" class="navbar navbar-default navbar-fixed-top "
            role="navigation">
         <div class="container">
           <div class="navbar-header">
+            <a href="#" class="navbar-left">
+            <img style="padding-top: 0.5em;padding-right: 0.5em;"
+            src="resources/logo/logo.svg">
+            </a>
             <button type="button" class="navbar-toggle collapsed"
                     data-toggle="collapse" data-target="#js-navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -100,6 +105,15 @@
 
     <div class="container">
     <div class="app-body" ng-view=""></div>
+    </div>
+    </div>
+
+    <div class="footer">
+      <div ng-class="{'dark':!THEME}" class="container footer-text">
+        <p class="coala-footer">coala<span
+        ng-class="{'dark':!THEME}" class="io-coala">.io</span>
+        </p>
+      </div>
     </div>
 
     <script src="bower_components/angular/angular.js"></script>
