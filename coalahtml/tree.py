@@ -25,7 +25,7 @@ class Tree:
 
     @staticmethod
     def findroot(file_list):
-        prefix = os.path.commonprefix(file_list)
+        prefix = os.path.commonprefix(list(file_list))
         last_sep = prefix.rfind(os.sep)
         return prefix[:last_sep]
 
