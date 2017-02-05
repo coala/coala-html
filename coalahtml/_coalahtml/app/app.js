@@ -26,7 +26,9 @@ angular
       });
     });
   }])
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider',
+           function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(false).hashPrefix('');
     $routeProvider
       .when('/', {
         templateUrl: 'app/views/main.html',
