@@ -9,7 +9,7 @@ from unittest.mock import patch
 from coalahtml import Constants
 from coalahtml.helper import get_file
 from coalahtml import coala_html
-from coalib.misc.ContextManagers import prepare_file
+from coala_utils.ContextManagers import prepare_file
 from TestUtilities import execute_coala
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)),

@@ -1,6 +1,6 @@
 import sys
 
-from coalib.misc.ContextManagers import retrieve_stdout
+from coala_utils.ContextManagers import retrieve_stdout
 
 
 def execute_coala(func, binary, *args):
