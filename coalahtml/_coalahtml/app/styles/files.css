@@ -7,13 +7,17 @@
 }
 
 .diff-highlight{
-    background: #bda596 !important;
+    background: darkslategrey !important;
+    color: white !important;
+    font-family: "Roboto Mono", monospace;
 }
 .msg-highlight{
-    color: #d75a98 !important;
+    color: lightsalmon !important;
     font-family: monospace;
-    font-weight: 900;
+    font-weight: 500;
     background: transparent;
+    font-size: 1.2em;
+    margin-left: 1em;
 }
 .table-row-link {
     cursor: pointer;
