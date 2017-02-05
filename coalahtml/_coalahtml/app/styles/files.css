@@ -67,18 +67,21 @@ pre.dark li.L9 {background-color: #333; }
   MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
 pre {
   background: #efebd6;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono",
-               Monaco, Consolas, monospace;
+  font-family: "Roboto Mono", Menlo, "Bitstream Vera Sans Mono",
+              "DejaVu Sans Mono", Monaco, Consolas, monospace;
   border: 0 !important;
+  background: black;
+  border-radius: 0;
 }
 .pln {
-  color: #20201d;
+  color: white;
 }
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
   color: #999580;
+  background-color: #263238 !important;
 }
 
 li.L0,
