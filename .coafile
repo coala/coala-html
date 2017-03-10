@@ -28,6 +28,11 @@ bears = PyUnusedCodeBear
 default_actions =
     PyUnusedCodeBear: ApplyPatchAction
 
+[commit]
+bears = GitCommitBear
+shortlog_trailing_period = false
+shortlog_regex = ([^:]*: [A-Z].*)
+
 [autopep8]
 bears = PEP8Bear
 default_actions = PEP8Bear: ApplyPatchAction
