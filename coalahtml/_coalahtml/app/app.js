@@ -1,7 +1,8 @@
 'use strict';
 
 angular
-  .module('coalaHtmlApp', ['ngRoute', 'ngSanitize'])
+  .module('coalaHtmlApp', ['ngRoute', 'ngSanitize', 'ngAnimate',
+                           'ngTouch', 'ui.bootstrap'])
   .run(['$rootScope', '$http', function($rootScope, $http) {
     $rootScope.LOG_LEVELS = ["DEBUG", "INFO", "WARNING", "ERROR"];
     $rootScope.RESULT_SEVERITY = ["INFO", "NORMAL", "MAJOR"];
