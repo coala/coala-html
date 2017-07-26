@@ -22,6 +22,7 @@
 .table-row-link {
     cursor: pointer;
     cursor: hand;
+    border: 2px solid lightgray;
 }
 .filename{
     color: blue;
