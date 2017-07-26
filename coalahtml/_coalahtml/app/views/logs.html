@@ -1,5 +1,5 @@
 <div class="logs">
-  <div class="log" ng-repeat="log_message in data | filter:q">
+  <div class="card log" ng-repeat="log_message in data | filter:q">
     <span class="log-level label
                  label-{{ LOG_LEVEL_TO_BOOTSTRAP[log_message.log_level] }}">
       {{ LOG_LEVELS[log_message.log_level] }}
