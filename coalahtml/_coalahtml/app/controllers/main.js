@@ -36,5 +36,21 @@ angular.module('coalaHtmlApp')
         });
       };
 
+      $scope.search = function (searchText) {
+        return function (item) {
+          if (item){
+            if(searchText){
+              if ((JSON.stringify(item).toLowerCase())
+                .indexOf(searchText.toLowerCase()) > -1){
+                return true;
+              } else {
+                return false;
+              }
+            }
+            return true;
+          }
+        };
+      };
+
     parseCoalaProject();
   }]);

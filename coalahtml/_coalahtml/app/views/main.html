@@ -1,6 +1,18 @@
+<div class="col-md-8 col-md-offset-2 input-field searchbar">
+  <input ng-model="searchText" placeholder="Search" id="search"
+  class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched"
+  type="search" required="">
+  <label id="icon" class="label-icon active" for="search">
+    <i class="material-icons">search</i>
+  </label>
+</div>
+
+<br>
+
 <div ng-repeat="info in data">
   <div ng-repeat="(file, result) in info">
-    <div class="card code" ng-class="{'dark':!THEME}" ng-repeat="item in result | filter:q">
+    <div class="card code" ng-class="{'dark':!THEME}"
+    ng-repeat="item in result | filter: search(searchText)">
       <span ng-class="{'dark':!THEME}" class="text-primary">{{ file }}</span><br/>
       <span class="severity
                    label label-{{ SEVERITY_TO_BOOTSTRAP[item.severity] }}">

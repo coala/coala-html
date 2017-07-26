@@ -53,6 +53,11 @@ describe('MainCtrl', function() {
             ]
           }
         };
+    var SEARCH_TEXT = 'coala';
+    var SEARCH_ITEMS = [
+      'coala : Linting and Fixing for all Languages',
+      'some text which doesnt have the matching word'
+    ];
 
     describe('parseCoalaProject()', function() {
 
@@ -91,6 +96,31 @@ describe('MainCtrl', function() {
         });
         it('test scope.data', function() {
             expect(scope.data).to.deep.equal([rootScope.resultFiles]);
+        });
+
+    });
+
+    describe('search', function () {
+
+        beforeEach(module('coalaHtmlApp'));
+        beforeEach(inject(function ($controller) {
+            $controller('MainCtrl', {
+                $scope: scope,
+                $rootScope: rootScope
+            });
+        }));
+
+        it('test search matching', function() {
+            var result = scope.search(SEARCH_TEXT);
+            expect(result(SEARCH_ITEMS[0])).to.equal(true);
+        });
+        it('test search not matching', function() {
+            var result = scope.search(SEARCH_TEXT);
+            expect(result(SEARCH_ITEMS[1])).to.equal(false);
+        });
+        it('test search null', function() {
+            var result = scope.search(null);
+            expect(result(SEARCH_ITEMS[1])).to.equal(true);
         });
 
     });
