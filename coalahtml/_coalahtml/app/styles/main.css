@@ -56,17 +56,6 @@ body,html{
 .main-content{
  min-height:100%;
 }
-.footer{
- height:40px;
- margin-top:40px;
- padding-bottom: 20px;
-}
-.footer-text{
-  text-align: center;
-  font-size: 3em;
-  color: black;
-  font-weight: 200;
-}
 .io-coala{
   color:lightgray;
 }
@@ -147,4 +136,7 @@ div.footer-text.dark{
 }
 span.io-coala.dark{
   color:darkgray;
+}
+footer .row {
+  line-height: 1.5;
 }
