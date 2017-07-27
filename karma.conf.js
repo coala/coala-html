@@ -16,6 +16,8 @@ module.exports = function(config) {
     files: [
         './coalahtml/_coalahtml/bower_components/angular/angular.js',
         './coalahtml/_coalahtml/bower_components/angular-route/angular-route.js',
+        './coalahtml/_coalahtml/bower_components/jquery/dist/jquery.min.js',
+        './coalahtml/_coalahtml/bower_components/materialize/dist/js/materialize.min.js',
         './coalahtml/_coalahtml/bower_components/angular-sanitize/angular-sanitize.js',
         './coalahtml/_coalahtml/bower_components/google-code-prettify/src/prettify.js',
         './node_modules/angular-mocks/angular-mocks.js',

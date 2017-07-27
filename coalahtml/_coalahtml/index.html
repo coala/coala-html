@@ -11,15 +11,15 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,800,900">
     <link rel="stylesheet"
-          href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet"
           href="bower_components/google-code-prettify/src/prettify.css">
-    <!-- Bootstrap Material Design -->
     <link rel="stylesheet"
-          href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+          href="bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet"
-          href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
-
+          href="https://rawgit.com/coala/coalaCSS/master/coala.css">
+    <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/styles/main.css">
     <link rel="stylesheet" href="app/styles/logs.css">
     <link rel="stylesheet" href="app/styles/files.css">
@@ -112,21 +112,22 @@
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <script
       src="bower_components/google-code-prettify/src/prettify.js"></script>
     <script
       src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script
-      src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-    <script
-      src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/directives.js"></script>
     <script src="app/controllers/main.js"></script>
     <script src="app/controllers/logs.js"></script>
     <script src="app/controllers/files.js"></script>
-    <script type="text/javascript">
-      $.material.init();
+    <script>
+      $(document).ready(function () {
+          $('select').material_select();
+          $(".button-collapse").sideNav();
+          $('ul.tabs').tabs();
+      });
     </script>
   </body>
 </html>
