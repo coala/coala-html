@@ -25,6 +25,11 @@
         ng-bind-html="FILE_DATA[file].slice(item.start-1, item.end).join('\n')"
         ng-class="{'dark':!THEME}"
         class="prettyprint linenums:{{ item.start }}"></pre>
+      <span class="label label-{{ SEVERITY_TO_BOOTSTRAP[item.severity] }}">DIFF</span>
+      <pre
+        ng-bind-html="item['diffs'][file]"
+        ng-class="diff-highlight"
+        class="prettyprint black"></pre>
     </div>
   </div>
 </div>
