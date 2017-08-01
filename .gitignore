@@ -32,3 +32,4 @@ Goopfile.lock
 npm-debug.log
 bower_components
 coalahtml/_coalahtml/data/*
+rultor_github_secrets.sh
