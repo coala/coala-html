@@ -92,7 +92,9 @@ def main():
                       sort_keys=True,
                       indent=2,
                       separators=(',', ': '))
-    if not args.nolaunch:
+    if args.nolaunch:
+        sys.exit(exitcode)
+    else:
         # Launch server with reference point dir_path
         os.chdir(dir_path)
         if not os.path.exists('bower_components'):
