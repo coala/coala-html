@@ -11,15 +11,15 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,800,900">
     <link rel="stylesheet"
-          href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet"
           href="bower_components/google-code-prettify/src/prettify.css">
-    <!-- Bootstrap Material Design -->
     <link rel="stylesheet"
-          href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+          href="bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet"
-          href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
-
+          href="https://rawgit.com/coala/coalaCSS/master/coala.css">
+    <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/styles/main.css">
     <link rel="stylesheet" href="app/styles/logs.css">
     <link rel="stylesheet" href="app/styles/files.css">
@@ -36,97 +36,112 @@
     </style>
   </head>
   <body ng-class="{'dark':!THEME}" ng-app="coalaHtmlApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to
-        improve your experience.
-      </p>
-    <![endif]-->
+    <main>
+      <!--[if lte IE 8]>
+        <p class="browsehappy">
+          You are using an <strong>outdated</strong> browser. Please
+          <a href="http://browsehappy.com/">upgrade your browser</a> to
+          improve your experience.
+        </p>
+      <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="main-content">
-    <div class="header">
-      <div ng-class="{'dark':!THEME}" class="navbar navbar-default navbar-fixed-top "
-           role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a href="#" class="navbar-left">
-            <img style="padding-top: 0.5em;padding-right: 0.5em;"
-            src="resources/logo/logo.svg">
+      <!-- Add your site or application content here -->
+      <div class="tab-container" ng-controller="TabCtrl">
+      <div class="row">
+        <nav>
+          <div class="col s12 nav-wrapper">
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
             </a>
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/">coala-html</a>
-          </div>
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul bs-nav-active class="nav navbar-nav">
-              <li>
-                <a href="#/">Results
+            <ul class="tabs hide-on-med-and-down">
+              <li class="tab col s12">
+                <a ng-click="setTab('/')" ng-class="{active:isSet('/')}">RESULTS
                   <span ng-if="resultsCount" class = "result-badge badge">
                     {{ resultsCount }}
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="#/file/">Files
+              <li class="tab col s12">
+                <a ng-click="setTab('/file/')" ng-class="{active:isSet('/file/')}">FILES
                   <span ng-if="filesCount" class = "file-badge badge">
                     {{ filesCount }}
                   </span>
                 </a>
               </li>
-              <li>
-                <a href="#/logs">Logs
+              <li class="tab col s12">
+                <a ng-click="setTab('/logs')" ng-class="{active:isSet('/logs')}">LOGS
                   <span ng-if="logsCount" class = "log-badge badge">
                     {{ logsCount }}
                   </span>
                 </a>
               </li>
-              <li class="form-group label-floating" ng-show="resultsCount" >
-                  <label for="search" class="control-label">Search</label>
-                  <input class="form-control" id="search" ng-model="q" type="text" />
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li class="tab col s12">
+                <a ng-click="setTab('/')" ng-class="{active:isSet('/')}">RESULTS
+                  <span ng-if="resultsCount" class = "result-badge badge">
+                    {{ resultsCount }}
+                  </span>
+                </a>
+              </li>
+              <li class="tab col s12">
+                <a ng-click="setTab('/file/')" ng-class="{active:isSet('/file/')}">FILES
+                  <span ng-if="filesCount" class = "file-badge badge">
+                    {{ filesCount }}
+                  </span>
+                </a>
+              </li>
+              <li class="tab col s12">
+                <a ng-click="setTab('/logs')" ng-class="{active:isSet('/logs')}">LOGS
+                  <span ng-if="logsCount" class = "log-badge badge">
+                    {{ logsCount }}
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
+        </nav>
+      </div>
+      </div>
+      <div class="main-content">
+      <div class="container">
+      <div ng-view=""></div>
+      </div>
+      </div>
+    </main>
+    <footer class="page-footer footer-light transparent">
+      <div class="row">
+        <div class="col m6 offset-m3 center">
+          <img class="footer-logo"
+          src="https://api.coala.io/en/latest/_static/images/coala_logo.svg" alt="coala">
+          <span class="footer-title black-text">coala<span class="io-coala">.io</span></span>
         </div>
       </div>
-    </div>
-
-    <div class="container">
-    <div class="app-body" ng-view=""></div>
-    </div>
-    </div>
-
-    <div class="footer">
-      <div ng-class="{'dark':!THEME}" class="container footer-text">
-        <p class="coala-footer">coala<span
-        ng-class="{'dark':!THEME}" class="io-coala">.io</span>
-        </p>
+      <div class="footer-small-title center">
+        <span class="blue-grey-text text-lighten-3 uppercase">
+        Licensed under GNU AFFERO GENERAL PUBLIC LICENSE V3.0
+        </span>
       </div>
-    </div>
-
-    <script src="bower_components/angular/angular.js"></script>
+    </footer>
+  </body>
+  <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <script
       src="bower_components/google-code-prettify/src/prettify.js"></script>
     <script
       src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script
-      src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-    <script
-      src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/controllers/directives.js"></script>
     <script src="app/controllers/main.js"></script>
     <script src="app/controllers/logs.js"></script>
     <script src="app/controllers/files.js"></script>
-    <script type="text/javascript">
-      $.material.init();
+    <script src="app/controllers/tabs.js"></script>
+    <script>
+      $(document).ready(function () {
+          $('select').material_select();
+          $(".button-collapse").sideNav();
+          $('ul.tabs').tabs();
+      });
     </script>
-  </body>
 </html>

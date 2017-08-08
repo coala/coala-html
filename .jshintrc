@@ -11,6 +11,7 @@
   "undef": true,
   "unused": true,
   "expr": true,
+  "jquery": true,
   "globals": {
     "angular": false,
     "prettyPrintOne": false,

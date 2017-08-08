@@ -22,6 +22,7 @@
 .table-row-link {
     cursor: pointer;
     cursor: hand;
+    border: 2px solid lightgray;
 }
 .filename{
     color: blue;
@@ -70,8 +71,16 @@ pre {
   font-family: "Roboto Mono", Menlo, "Bitstream Vera Sans Mono",
               "DejaVu Sans Mono", Monaco, Consolas, monospace;
   border: 0 !important;
-  background: black;
+  background: #263238;
   border-radius: 0;
+}
+pre.prettyprint {
+  padding: 0 0 0 1em !important;
+  border: 1px solid #888;
+}
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 0.8em;
 }
 .pln {
   color: white;

@@ -1,14 +1,10 @@
 {
   "name": "coala-html",
   "dependencies": {
-    "angular": "^1.4.0",
-    "angular-route": "^1.4.0",
-    "bootstrap": "^3.3.6",
-    "google-code-prettify": "^1.0.4",
-    "angular-sanitize": "^1.5.0",
-    "bootstrap-material-design": "^0.5.10"
-  },
-  "resolutions": {
-    "bootstrap": "^3.3.6"
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "google-code-prettify": "^1.0.5",
+    "angular-sanitize": "^1.6.5",
+    "materialize": "^0.100.1"
   }
 }

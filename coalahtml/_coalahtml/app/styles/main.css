@@ -38,6 +38,9 @@
 .file-badge {
     background-color: #88C88D;
 }
+.badge {
+  color: white !important;
+}
 .log-badge {
     background-color: #888DC8;
 }
@@ -53,17 +56,6 @@ body,html{
 .main-content{
  min-height:100%;
 }
-.footer{
- height:40px;
- margin-top:40px;
- padding-bottom: 20px;
-}
-.footer-text{
-  text-align: center;
-  font-size: 3em;
-  color: black;
-  font-weight: 200;
-}
 .io-coala{
   color:lightgray;
 }
@@ -74,14 +66,13 @@ body,html{
   font-size: 1em  !important;
   font-weight: 500  !important;
   letter-spacing: 0.1em  !important;
+  padding: 0.3em 0.6em;
 }
 .label.label-warning {
     background-color: cadetblue !important;
+    color: white;
 }
-.card{
-  box-shadow:
-  0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 0px 10px 0 rgba(0, 0, 0, 0.1);
-}
+
 /* Light theme */
 body {
   background-color:white;
@@ -145,4 +136,7 @@ div.footer-text.dark{
 }
 span.io-coala.dark{
   color:darkgray;
+}
+footer .row {
+  line-height: 1.5;
 }

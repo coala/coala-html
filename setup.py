@@ -14,6 +14,7 @@ class PyTestCommand(TestCommand):
         errno = pytest.main([])
         sys.exit(errno)
 
+
 on_rtd = getenv('READTHEDOCS', None) != None
 
 with open('requirements.txt') as requirements:
