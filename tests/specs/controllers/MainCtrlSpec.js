@@ -103,11 +103,26 @@ describe('MainCtrl', function() {
     describe('search', function () {
 
         beforeEach(module('coalaHtmlApp'));
-        beforeEach(inject(function ($controller) {
+        beforeEach(inject(function ($controller, $injector,  _$rootScope_) {
+            $httpBackend = $injector.get('$httpBackend');
+            rootScope = _$rootScope_;
+            scope = _$rootScope_.$new();
+            $httpBackend.whenGET('data/Constants.json')
+                .respond(200, CONSTANTS);
+            $httpBackend.whenGET(CONSTANTS.data + CONSTANTS.coala)
+                .respond(200, COALA_JSON);
+            $httpBackend.whenGET(CONSTANTS.data + CONSTANTS.file_data)
+                .respond(200, FILE_DATA);
+            $httpBackend.whenGET(CONSTANTS.data + CONSTANTS.files)
+                .respond(200, FILES);
+            $httpBackend.whenGET(CONSTANTS.roothome)
+                .respond(200, ROOTHOME);
+            $httpBackend.flush();
             $controller('MainCtrl', {
                 $scope: scope,
                 $rootScope: rootScope
             });
+            $httpBackend.flush();
         }));
 
         it('test search matching', function() {
