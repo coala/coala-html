@@ -37,7 +37,7 @@ class Tree:
                 new_node = Node(item,
                                 parent=prev_node,
                                 abspath=os.path.join(prev_node.abspath, item))
-                if not prev_node.child.get(new_node.name, None):
+                if new_node.name not in prev_node.child:
                     prev_node.child[new_node.name] = new_node
                 prev_node = prev_node.child[new_node.name]
 
