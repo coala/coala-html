@@ -61,7 +61,7 @@ GETTING INVOLVED
 
 If you want to contribute to coala-html, please take a look at the `Getting
 Involved Information
-<http://coala.readthedocs.org/en/latest/Getting_Involved/README.html>`__.
+<https://coala.io/#/getinvolved>`__.
 
 We appreciate any help!
 
