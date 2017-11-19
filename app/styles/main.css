@@ -5,15 +5,21 @@
     border: 1px solid #D8D8D8;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    margin-bottom: 2em;
 }
 .origin {
-    color: #269E37;
+    color: antiquewhite;
     margin-left: 5px;
+    background-color: black !important;
+    letter-spacing: 0.1em  !important;
+    padding: .3em .6em;
+}
+.message{
+    color: black;
 }
 .control-label, .help-block {
-  color:#88c88d !important;
+  color:white !important;
 }
-
 #search {
   color:white;
 }
@@ -21,7 +27,6 @@
   margin: 2px !important;
   margin-top:6px !important;
   margin-left:50px !important;
-
 }
 .result-badge, .file-badge, .log-badge {
     padding: 4px 5px;
@@ -33,23 +38,53 @@
 .file-badge {
     background-color: #88C88D;
 }
+.badge {
+  color: white !important;
+}
 .log-badge {
     background-color: #888DC8;
 }
 .app-body{
     margin-top: 100px;
 }
+body{
+    line-height: 2em;
+}
+body,html{
+ height:100%;
+}
+.main-content{
+ min-height:100%;
+}
+.io-coala{
+  color:lightgray;
+}
+.text-primary {
+  color: black;
+}
+.label {
+  font-size: 1em  !important;
+  font-weight: 500  !important;
+  letter-spacing: 0.1em  !important;
+  padding: 0.3em 0.6em;
+}
+.label.label-warning {
+    background-color: cadetblue !important;
+    color: white;
+}
+
 /* Light theme */
 body {
-  background-color:#ccdcc3;
+  background-color:white;
 }
 .navbar-default {
-  background-color: rgba(168, 212, 142, 0.96);
+  background-color: #263238!important;
   border-color: transparent;
 }
 .code {
-  background-color: rgb(244, 251, 233);
-  border: 1px solid #112C02;
+  background-color: white;
+  border: 0;
+  border-radius: 0;
 }
 /* Dark theme */
 span.message.dark {
@@ -92,4 +127,16 @@ h3.dark{
 }
 .togglebutton label .toggle {
   background-color: rgb(216, 243, 220);
+}
+div.footer-text.dark{
+  text-align: center;
+  font-size: 3em;
+  color: white !important;
+  font-weight: 200;
+}
+span.io-coala.dark{
+  color:darkgray;
+}
+footer .row {
+  line-height: 1.5;
 }

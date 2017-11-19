@@ -8,7 +8,7 @@ angular
     $rootScope.SEVERITY_TO_BOOTSTRAP = ["info", "warning", "danger"];
     $rootScope.LOG_LEVEL_TO_BOOTSTRAP = ["primary", "info", "warning",
                                          "danger"];
-    $rootScope.THEME = 0; // 0 for Dark and 1 for Light
+    $rootScope.THEME = 1; // 0 for Dark and 1 for Light
     $http.get("data/Constants.json").then(function(constants) {
       $rootScope.CONSTANTS = constants.data;
       $http.get($rootScope.CONSTANTS.data + $rootScope.CONSTANTS.file_data)
@@ -26,7 +26,9 @@ angular
       });
     });
   }])
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider',
+           function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(false).hashPrefix('');
     $routeProvider
       .when('/', {
         templateUrl: 'app/views/main.html',

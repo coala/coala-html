@@ -7,17 +7,22 @@
 }
 
 .diff-highlight{
-    background: #bda596 !important;
+    background: darkslategrey !important;
+    color: white !important;
+    font-family: "Roboto Mono", monospace;
 }
 .msg-highlight{
-    color: #d75a98 !important;
+    color: lightsalmon !important;
     font-family: monospace;
-    font-weight: 900;
+    font-weight: 500;
     background: transparent;
+    font-size: 1.2em;
+    margin-left: 1em;
 }
 .table-row-link {
     cursor: pointer;
     cursor: hand;
+    border: 2px solid lightgray;
 }
 .filename{
     color: blue;
@@ -36,8 +41,10 @@ pre.dark .typ { color: #98fb98 } /* type    - lightgreen */
 pre.dark .lit { color: #cd5c5c } /* literal - darkred */
 pre.dark .pun { color: #fff }    /* punctuation */
 pre.dark .pln { color: #fff }    /* plaintext */
+/* Start ignoring LineLengthBear */
 pre.dark .tag { color: #f0e68c; font-weight: bold } /* html tag - lightyellow */
 pre.dark .atn { color: #bdb76b; font-weight: bold } /* attribute name - khaki */
+/* Stop ignoring */
 pre.dark .atv { color: #ffa0a0 } /* attribute value - pink */
 pre.dark .dec { color: #98fb98 } /* decimal - lightgreen */
 
@@ -61,18 +68,29 @@ pre.dark li.L9 {background-color: #333; }
   MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
 pre {
   background: #efebd6;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono",
-               Monaco, Consolas, monospace;
+  font-family: "Roboto Mono", Menlo, "Bitstream Vera Sans Mono",
+              "DejaVu Sans Mono", Monaco, Consolas, monospace;
   border: 0 !important;
+  background: #263238;
+  border-radius: 0;
+}
+pre.prettyprint {
+  padding: 0 0 0 1em !important;
+  border: 1px solid #888;
+}
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 0.8em;
 }
 .pln {
-  color: #20201d;
+  color: white;
 }
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
   color: #999580;
+  background-color: #263238 !important;
 }
 
 li.L0,
@@ -86,13 +104,13 @@ li.L7,
 li.L8,
 li.L9 {
   padding-left: 1em;
-  background-color: #efebd6;
+  background-color: black !important;
   list-style-type: decimal;
 }
  /* string content */
 .str {   color: #60ac39; }
 /* keyword */
-.kwd {   color: #b854d4; }
+.kwd {   color: lightblue; font-weight: bold}
 /* comment */
 .com {   color: #999580; }
 /* type name */
@@ -100,15 +118,15 @@ li.L9 {
 /* literal value */
 .lit {   color: #b65611; }
 /* punctuation */
-.pun {   color: #20201d; }
+.pun {   color: white; }
 /* lisp open bracket */
-.opn {   color: #20201d; }
+.opn {   color: white; }
 /* lisp close bracket */
-.clo {   color: #20201d; }
+.clo {   color: white; }
 /* markup tag name */
-.tag {   color: #d7337; }
+.tag {   color: #d7337; font-weight: bold}
 /* markup attribute name */
-.atn {   color: #b65611; }
+.atn {   color: #b65611; font-weight: bold}
 /* markup attribute value */
 .atv {   color: #1fad83;
 /* declaration */
