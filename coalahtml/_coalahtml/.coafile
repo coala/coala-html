@@ -1,0 +1,16 @@
+[js]
+files = app/**/*.js
+bears = LineLengthBear, SpaceConsistencyBear, JSHintBear
+jshint_config = ./.jshintrc
+use_spaces = true
+
+[css]
+files = app/styles/*.css
+bears = LineLengthBear, SpaceConsistencyBear, CSSLintBear
+use_spaces = true
+
+[html]
+files = index.html, app/views/*.html
+bears = LineLengthBear, SpaceConsistencyBear
+use_spaces = true
+
