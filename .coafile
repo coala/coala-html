@@ -31,3 +31,12 @@ default_actions =
 [autopep8]
 bears = PEP8Bear
 default_actions = PEP8Bear: ApplyPatchAction
+
+[json]
+bears = JSONFormatBear
+files = data/*.json
+default_actions = JSONFormatBear: ApplyPatchAction
+
+[yaml]
+bears = YAMLLintBear
+files = *.yml
