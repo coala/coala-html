@@ -1,447 +1,447 @@
 {
-  "/home/tushar/coala": [
-    "/home/tushar/coala/coalib",
-    "/home/tushar/coala/CONTRIBUTING.md",
-    "/home/tushar/coala/conftest.py",
-    "/home/tushar/coala/tests",
-    "/home/tushar/coala/docs",
-    "/home/tushar/coala/setup.py",
-    "/home/tushar/coala/coala",
-    "/home/tushar/coala/README.rst"
-  ],
-  "/home/tushar/coala/coalib": [
-    "/home/tushar/coala/coalib/bearlib",
-    "/home/tushar/coala/coalib/bears",
-    "/home/tushar/coala/coalib/coala_dbus.py",
-    "/home/tushar/coala/coalib/collecting",
-    "/home/tushar/coala/coalib/coala.py",
-    "/home/tushar/coala/coalib/results",
-    "/home/tushar/coala/coalib/coala_main.py",
-    "/home/tushar/coala/coalib/misc",
-    "/home/tushar/coala/coalib/__init__.py",
-    "/home/tushar/coala/coalib/output",
-    "/home/tushar/coala/coalib/coala_ci.py",
-    "/home/tushar/coala/coalib/parsing",
-    "/home/tushar/coala/coalib/coala_delete_orig.py",
-    "/home/tushar/coala/coalib/coala_json.py",
-    "/home/tushar/coala/coalib/coala_format.py",
-    "/home/tushar/coala/coalib/processes",
-    "/home/tushar/coala/coalib/settings"
-  ],
-  "/home/tushar/coala/coalib/bearlib": [
-    "/home/tushar/coala/coalib/bearlib/languages",
-    "/home/tushar/coala/coalib/bearlib/abstractions",
-    "/home/tushar/coala/coalib/bearlib/spacing",
-    "/home/tushar/coala/coalib/bearlib/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/bearlib/abstractions": [
-    "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
-    "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
-    "/home/tushar/coala/coalib/bearlib/abstractions/SectionCreatable.py",
-    "/home/tushar/coala/coalib/bearlib/abstractions/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/bearlib/languages": [
-    "/home/tushar/coala/coalib/bearlib/languages/definitions",
-    "/home/tushar/coala/coalib/bearlib/languages/documentation",
-    "/home/tushar/coala/coalib/bearlib/languages/LanguageDefinition.py",
-    "/home/tushar/coala/coalib/bearlib/languages/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/bearlib/languages/definitions": [
-    "/home/tushar/coala/coalib/bearlib/languages/definitions/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/bearlib/languages/documentation": [
-    "/home/tushar/coala/coalib/bearlib/languages/documentation/DocumentationExtraction.py",
-    "/home/tushar/coala/coalib/bearlib/languages/documentation/DocumentationComment.py",
-    "/home/tushar/coala/coalib/bearlib/languages/documentation/DocstyleDefinition.py",
-    "/home/tushar/coala/coalib/bearlib/languages/documentation/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/bearlib/spacing": [
-    "/home/tushar/coala/coalib/bearlib/spacing/SpacingHelper.py",
-    "/home/tushar/coala/coalib/bearlib/spacing/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/bears": [
-    "/home/tushar/coala/coalib/bears/LocalBear.py",
-    "/home/tushar/coala/coalib/bears/BEAR_KIND.py",
-    "/home/tushar/coala/coalib/bears/Bear.py",
-    "/home/tushar/coala/coalib/bears/__init__.py",
-    "/home/tushar/coala/coalib/bears/GlobalBear.py"
-  ],
-  "/home/tushar/coala/coalib/collecting": [
-    "/home/tushar/coala/coalib/collecting/Dependencies.py",
-    "/home/tushar/coala/coalib/collecting/Importers.py",
-    "/home/tushar/coala/coalib/collecting/__init__.py",
-    "/home/tushar/coala/coalib/collecting/Collectors.py"
-  ],
-  "/home/tushar/coala/coalib/misc": [
-    "/home/tushar/coala/coalib/misc/Exceptions.py",
-    "/home/tushar/coala/coalib/misc/MutableValue.py",
-    "/home/tushar/coala/coalib/misc/Constants.py",
-    "/home/tushar/coala/coalib/misc/BuildManPage.py",
-    "/home/tushar/coala/coalib/misc/__init__.py",
-    "/home/tushar/coala/coalib/misc/ContextManagers.py",
-    "/home/tushar/coala/coalib/misc/StringConverter.py",
-    "/home/tushar/coala/coalib/misc/DictUtilities.py",
-    "/home/tushar/coala/coalib/misc/Annotations.py",
-    "/home/tushar/coala/coalib/misc/Enum.py",
-    "/home/tushar/coala/coalib/misc/Future.py",
-    "/home/tushar/coala/coalib/misc/Shell.py"
-  ],
-  "/home/tushar/coala/coalib/output": [
-    "/home/tushar/coala/coalib/output/ConsoleInteraction.py",
-    "/home/tushar/coala/coalib/output/ConfWriter.py",
-    "/home/tushar/coala/coalib/output/JSONEncoder.py",
-    "/home/tushar/coala/coalib/output/dbus",
-    "/home/tushar/coala/coalib/output/__init__.py",
-    "/home/tushar/coala/coalib/output/Interactions.py",
-    "/home/tushar/coala/coalib/output/printers",
-    "/home/tushar/coala/coalib/output/Tagging.py"
-  ],
-  "/home/tushar/coala/coalib/output/dbus": [
-    "/home/tushar/coala/coalib/output/dbus/BuildDbusService.py",
-    "/home/tushar/coala/coalib/output/dbus/__init__.py",
-    "/home/tushar/coala/coalib/output/dbus/DbusDocument.py",
-    "/home/tushar/coala/coalib/output/dbus/DbusServer.py",
-    "/home/tushar/coala/coalib/output/dbus/DbusApp.py"
-  ],
-  "/home/tushar/coala/coalib/output/printers": [
-    "/home/tushar/coala/coalib/output/printers/LOG_LEVEL.py",
-    "/home/tushar/coala/coalib/output/printers/LogPrinter.py",
-    "/home/tushar/coala/coalib/output/printers/__init__.py",
-    "/home/tushar/coala/coalib/output/printers/ListLogPrinter.py"
-  ],
-  "/home/tushar/coala/coalib/parsing": [
-    "/home/tushar/coala/coalib/parsing/StringProcessing",
-    "/home/tushar/coala/coalib/parsing/DefaultArgParser.py",
-    "/home/tushar/coala/coalib/parsing/LineParser.py",
-    "/home/tushar/coala/coalib/parsing/ConfParser.py",
-    "/home/tushar/coala/coalib/parsing/CliParsing.py",
-    "/home/tushar/coala/coalib/parsing/__init__.py",
-    "/home/tushar/coala/coalib/parsing/Globbing.py"
-  ],
-  "/home/tushar/coala/coalib/parsing/StringProcessing": [
-    "/home/tushar/coala/coalib/parsing/StringProcessing/Core.py",
-    "/home/tushar/coala/coalib/parsing/StringProcessing/Match.py",
-    "/home/tushar/coala/coalib/parsing/StringProcessing/InBetweenMatch.py",
-    "/home/tushar/coala/coalib/parsing/StringProcessing/__init__.py",
-    "/home/tushar/coala/coalib/parsing/StringProcessing/Filters.py"
-  ],
-  "/home/tushar/coala/coalib/processes": [
-    "/home/tushar/coala/coalib/processes/communication",
-    "/home/tushar/coala/coalib/processes/Processing.py",
-    "/home/tushar/coala/coalib/processes/LogPrinterThread.py",
-    "/home/tushar/coala/coalib/processes/CONTROL_ELEMENT.py",
-    "/home/tushar/coala/coalib/processes/BearRunning.py",
-    "/home/tushar/coala/coalib/processes/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/processes/communication": [
-    "/home/tushar/coala/coalib/processes/communication/__init__.py",
-    "/home/tushar/coala/coalib/processes/communication/LogMessage.py"
-  ],
-  "/home/tushar/coala/coalib/results": [
-    "/home/tushar/coala/coalib/results/Result.py",
-    "/home/tushar/coala/coalib/results/ResultFilter.py",
-    "/home/tushar/coala/coalib/results/__init__.py",
-    "/home/tushar/coala/coalib/results/LineDiff.py",
-    "/home/tushar/coala/coalib/results/AbsolutePosition.py",
-    "/home/tushar/coala/coalib/results/HiddenResult.py",
-    "/home/tushar/coala/coalib/results/TextRange.py",
-    "/home/tushar/coala/coalib/results/SourceRange.py",
-    "/home/tushar/coala/coalib/results/RESULT_SEVERITY.py",
-    "/home/tushar/coala/coalib/results/Diff.py",
-    "/home/tushar/coala/coalib/results/SourcePosition.py",
-    "/home/tushar/coala/coalib/results/result_actions",
-    "/home/tushar/coala/coalib/results/TextPosition.py"
-  ],
-  "/home/tushar/coala/coalib/results/result_actions": [
-    "/home/tushar/coala/coalib/results/result_actions/PrintMoreInfoAction.py",
-    "/home/tushar/coala/coalib/results/result_actions/ResultAction.py",
-    "/home/tushar/coala/coalib/results/result_actions/OpenEditorAction.py",
-    "/home/tushar/coala/coalib/results/result_actions/ApplyPatchAction.py",
-    "/home/tushar/coala/coalib/results/result_actions/PrintDebugMessageAction.py",
-    "/home/tushar/coala/coalib/results/result_actions/ShowPatchAction.py",
-    "/home/tushar/coala/coalib/results/result_actions/__init__.py"
-  ],
-  "/home/tushar/coala/coalib/settings": [
-    "/home/tushar/coala/coalib/settings/Setting.py",
-    "/home/tushar/coala/coalib/settings/ConfigurationGathering.py",
-    "/home/tushar/coala/coalib/settings/Section.py",
-    "/home/tushar/coala/coalib/settings/FunctionMetadata.py",
-    "/home/tushar/coala/coalib/settings/DocstringMetadata.py",
-    "/home/tushar/coala/coalib/settings/__init__.py",
-    "/home/tushar/coala/coalib/settings/SectionFilling.py"
-  ],
-  "/home/tushar/coala/docs": [
-    "/home/tushar/coala/docs/index.rst",
-    "/home/tushar/coala/docs/General_Dev_Info",
-    "/home/tushar/coala/docs/Users",
-    "/home/tushar/coala/docs/Getting_Involved"
-  ],
-  "/home/tushar/coala/docs/General_Dev_Info": [
-    "/home/tushar/coala/docs/General_Dev_Info/git_tutorial_1.rst"
-  ],
-  "/home/tushar/coala/docs/Getting_Involved": [
-    "/home/tushar/coala/docs/Getting_Involved/Newcomers.rst",
-    "/home/tushar/coala/docs/Getting_Involved/MAC_Hints.rst",
-    "/home/tushar/coala/docs/Getting_Involved/Review.rst",
-    "/home/tushar/coala/docs/Getting_Involved/Writing_Tests.rst",
-    "/home/tushar/coala/docs/Getting_Involved/Testing.rst",
-    "/home/tushar/coala/docs/Getting_Involved/Writing_Good_Commits.rst",
-    "/home/tushar/coala/docs/Getting_Involved/README.rst",
-    "/home/tushar/coala/docs/Getting_Involved/Writing_Documentation.rst",
-    "/home/tushar/coala/docs/Getting_Involved/Codestyle.rst"
-  ],
-  "/home/tushar/coala/docs/Users": [
-    "/home/tushar/coala/docs/Users/Glob_Patterns.rst",
-    "/home/tushar/coala/docs/Users/Install.rst",
-    "/home/tushar/coala/docs/Users/Exit_Codes.rst",
-    "/home/tushar/coala/docs/Users/coafile.rst",
-    "/home/tushar/coala/docs/Users/Tutorials",
-    "/home/tushar/coala/docs/Users/Git_Hooks.rst",
-    "/home/tushar/coala/docs/Users/External_APIs.rst"
-  ],
-  "/home/tushar/coala/docs/Users/Tutorials": [
-    "/home/tushar/coala/docs/Users/Tutorials/Self_Correcting_Bears.rst",
-    "/home/tushar/coala/docs/Users/Tutorials/Writing_Bears.rst",
-    "/home/tushar/coala/docs/Users/Tutorials/Tutorial.rst",
-    "/home/tushar/coala/docs/Users/Tutorials/Linter_Bears.rst",
-    "/home/tushar/coala/docs/Users/Tutorials/Auto_Completion.rst",
-    "/home/tushar/coala/docs/Users/Tutorials/Testing_Bears.rst",
-    "/home/tushar/coala/docs/Users/Tutorials/Git_Help.rst"
-  ],
-  "/home/tushar/coala/tests": [
-    "/home/tushar/coala/tests/bearlib",
-    "/home/tushar/coala/tests/bears",
-    "/home/tushar/coala/tests/misc",
-    "/home/tushar/coala/tests/results",
-    "/home/tushar/coala/tests/collecting",
-    "/home/tushar/coala/tests/coalaJSONTest.py",
-    "/home/tushar/coala/tests/coalaTest.py",
-    "/home/tushar/coala/tests/test_bears",
-    "/home/tushar/coala/tests/TestUtilities.py",
-    "/home/tushar/coala/tests/__init__.py",
-    "/home/tushar/coala/tests/output",
-    "/home/tushar/coala/tests/coalaDbusTest.py",
-    "/home/tushar/coala/tests/parsing",
-    "/home/tushar/coala/tests/coalaCITest.py",
-    "/home/tushar/coala/tests/coalaFormatTest.py",
-    "/home/tushar/coala/tests/coalaDeleteOrigTest.py",
-    "/home/tushar/coala/tests/processes",
-    "/home/tushar/coala/tests/settings"
-  ],
-  "/home/tushar/coala/tests/bearlib": [
-    "/home/tushar/coala/tests/bearlib/languages",
-    "/home/tushar/coala/tests/bearlib/spacing",
-    "/home/tushar/coala/tests/bearlib/parsing",
-    "/home/tushar/coala/tests/bearlib/abstractions",
-    "/home/tushar/coala/tests/bearlib/__init__.py"
-  ],
-  "/home/tushar/coala/tests/bearlib/abstractions": [
-    "/home/tushar/coala/tests/bearlib/abstractions/LintTest.py",
-    "/home/tushar/coala/tests/bearlib/abstractions/LinterTest.py",
-    "/home/tushar/coala/tests/bearlib/abstractions/linter_test_files",
-    "/home/tushar/coala/tests/bearlib/abstractions/__init__.py",
-    "/home/tushar/coala/tests/bearlib/abstractions/SectionCreatableTest.py"
-  ],
-  "/home/tushar/coala/tests/bearlib/abstractions/linter_test_files": [
-    "/home/tushar/coala/tests/bearlib/abstractions/linter_test_files/test_linter.py"
-  ],
-  "/home/tushar/coala/tests/bearlib/languages": [
-    "/home/tushar/coala/tests/bearlib/languages/documentation",
-    "/home/tushar/coala/tests/bearlib/languages/__init__.py",
-    "/home/tushar/coala/tests/bearlib/languages/LanguageDefinitionTest.py"
-  ],
-  "/home/tushar/coala/tests/bearlib/languages/documentation": [
-    "/home/tushar/coala/tests/bearlib/languages/documentation/DocumentationCommentTest.py",
-    "/home/tushar/coala/tests/bearlib/languages/documentation/DocstyleDefinitionTest.py",
-    "/home/tushar/coala/tests/bearlib/languages/documentation/DocumentationExtractionTest.py"
-  ],
-  "/home/tushar/coala/tests/bearlib/parsing": [
-    "/home/tushar/coala/tests/bearlib/parsing/__init__.py"
-  ],
-  "/home/tushar/coala/tests/bearlib/spacing": [
-    "/home/tushar/coala/tests/bearlib/spacing/SpacingHelperTest.py",
-    "/home/tushar/coala/tests/bearlib/spacing/__init__.py"
-  ],
-  "/home/tushar/coala/tests/bears": [
-    "/home/tushar/coala/tests/bears/GlobalBearTest.py",
-    "/home/tushar/coala/tests/bears/BearTest.py",
-    "/home/tushar/coala/tests/bears/LocalBearTest.py",
-    "/home/tushar/coala/tests/bears/__init__.py"
-  ],
-  "/home/tushar/coala/tests/collecting": [
-    "/home/tushar/coala/tests/collecting/importers_test_dir",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir",
-    "/home/tushar/coala/tests/collecting/DependenciesTest.py",
-    "/home/tushar/coala/tests/collecting/ImportersTest.py",
-    "/home/tushar/coala/tests/collecting/CollectorsTest.py",
-    "/home/tushar/coala/tests/collecting/__init__.py"
-  ],
-  "/home/tushar/coala/tests/collecting/collectors_test_dir": [
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/others",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global"
-  ],
-  "/home/tushar/coala/tests/collecting/collectors_test_dir/bears": [
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears/metabear.py",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears/bear2.py",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears/bear1.py"
-  ],
-  "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global": [
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global/bears1.py",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global/bears2.py"
-  ],
-  "/home/tushar/coala/tests/collecting/collectors_test_dir/others": [
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files"
-  ],
-  "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files": [
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files/file1.py",
-    "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files/file2.py"
-  ],
-  "/home/tushar/coala/tests/collecting/importers_test_dir": [
-    "/home/tushar/coala/tests/collecting/importers_test_dir/file_one.py",
-    "/home/tushar/coala/tests/collecting/importers_test_dir/file_two.py"
-  ],
-  "/home/tushar/coala/tests/misc": [
-    "/home/tushar/coala/tests/misc/BuildManPageTest.py",
-    "/home/tushar/coala/tests/misc/StringConverterTest.py",
-    "/home/tushar/coala/tests/misc/AnnotationsTest.py",
-    "/home/tushar/coala/tests/misc/run_shell_command_testfiles",
-    "/home/tushar/coala/tests/misc/DictUtilitiesTest.py",
-    "/home/tushar/coala/tests/misc/EnumTest.py",
-    "/home/tushar/coala/tests/misc/DecoratorsTest.py",
-    "/home/tushar/coala/tests/misc/ContextManagersTest.py",
-    "/home/tushar/coala/tests/misc/ShellTest.py",
-    "/home/tushar/coala/tests/misc/ExceptionsTest.py",
-    "/home/tushar/coala/tests/misc/__init__.py"
-  ],
-  "/home/tushar/coala/tests/misc/run_shell_command_testfiles": [
-    "/home/tushar/coala/tests/misc/run_shell_command_testfiles/test_program.py",
-    "/home/tushar/coala/tests/misc/run_shell_command_testfiles/test_input_program.py",
-    "/home/tushar/coala/tests/misc/run_shell_command_testfiles/test_interactive_program.py"
-  ],
-  "/home/tushar/coala/tests/output": [
-    "/home/tushar/coala/tests/output/TaggingTest.py",
-    "/home/tushar/coala/tests/output/JSONEncoderTest.py",
-    "/home/tushar/coala/tests/output/printers",
-    "/home/tushar/coala/tests/output/ConfWriterTest.py",
-    "/home/tushar/coala/tests/output/InteractionsTest.py",
-    "/home/tushar/coala/tests/output/ConsoleInteractionTest.py",
-    "/home/tushar/coala/tests/output/__init__.py",
-    "/home/tushar/coala/tests/output/dbus"
-  ],
-  "/home/tushar/coala/tests/output/dbus": [
-    "/home/tushar/coala/tests/output/dbus/dbus_test_files",
-    "/home/tushar/coala/tests/output/dbus/DbusAppTest.py",
-    "/home/tushar/coala/tests/output/dbus/BuildDbusServiceTest.py",
-    "/home/tushar/coala/tests/output/dbus/DbusServerTest.py",
-    "/home/tushar/coala/tests/output/dbus/DbusTest.py",
-    "/home/tushar/coala/tests/output/dbus/__init__.py",
-    "/home/tushar/coala/tests/output/dbus/DbusDocumentTest.py"
-  ],
-  "/home/tushar/coala/tests/output/dbus/dbus_test_files": [
-    "/home/tushar/coala/tests/output/dbus/dbus_test_files/GlobalTestBear.py",
-    "/home/tushar/coala/tests/output/dbus/dbus_test_files/LocalTestBear.py"
-  ],
-  "/home/tushar/coala/tests/output/printers": [
-    "/home/tushar/coala/tests/output/printers/LogPrinterTest.py",
-    "/home/tushar/coala/tests/output/printers/ListLogPrinterTest.py",
-    "/home/tushar/coala/tests/output/printers/__init__.py"
-  ],
-  "/home/tushar/coala/tests/parsing": [
-    "/home/tushar/coala/tests/parsing/StringProcessing",
-    "/home/tushar/coala/tests/parsing/ConfParserTest.py",
-    "/home/tushar/coala/tests/parsing/GlobbingTest.py",
-    "/home/tushar/coala/tests/parsing/GlobTestDir",
-    "/home/tushar/coala/tests/parsing/CliParsingTest.py",
-    "/home/tushar/coala/tests/parsing/LineParserTest.py",
-    "/home/tushar/coala/tests/parsing/__init__.py"
-  ],
-  "/home/tushar/coala/tests/parsing/GlobTestDir": [
-    "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1"
-  ],
-  "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1": [
-    "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1/File11.py",
-    "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1/File12.py"
-  ],
-  "/home/tushar/coala/tests/parsing/StringProcessing": [
-    "/home/tushar/coala/tests/parsing/StringProcessing/SearchForTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedSearchInBetweenTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/PositionIsEscapedTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/InBetweenMatchTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/ConvertToRawTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/SearchInBetweenTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/NestedSearchInBetweenTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedSearchForTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/UnescapeTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/LimitTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedSplitTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedStripTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/MatchTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/__init__.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/SplitTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/EscapeTest.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/StringProcessingTestBase.py",
-    "/home/tushar/coala/tests/parsing/StringProcessing/TrimEmptyMatchesTest.py"
-  ],
-  "/home/tushar/coala/tests/processes": [
-    "/home/tushar/coala/tests/processes/BearRunningTest.py",
-    "/home/tushar/coala/tests/processes/communication",
-    "/home/tushar/coala/tests/processes/LogPrinterThreadTest.py",
-    "/home/tushar/coala/tests/processes/ProcessingTest.py",
-    "/home/tushar/coala/tests/processes/section_executor_test_files",
-    "/home/tushar/coala/tests/processes/__init__.py"
-  ],
-  "/home/tushar/coala/tests/processes/communication": [
-    "/home/tushar/coala/tests/processes/communication/LogMessageTest.py",
-    "/home/tushar/coala/tests/processes/communication/__init__.py"
-  ],
-  "/home/tushar/coala/tests/processes/section_executor_test_files": [
-    "/home/tushar/coala/tests/processes/section_executor_test_files/ProcessingLocalTestBear.py",
-    "/home/tushar/coala/tests/processes/section_executor_test_files/ProcessingGlobalTestBear.py"
-  ],
-  "/home/tushar/coala/tests/results": [
-    "/home/tushar/coala/tests/results/EnsureFilesPresentTest.py",
-    "/home/tushar/coala/tests/results/ResultFilterTest.py",
-    "/home/tushar/coala/tests/results/AbsolutePositionTest.py",
-    "/home/tushar/coala/tests/results/HiddenResultTest.py",
-    "/home/tushar/coala/tests/results/TextRangeTest.py",
-    "/home/tushar/coala/tests/results/ResultTest.py",
-    "/home/tushar/coala/tests/results/__init__.py",
-    "/home/tushar/coala/tests/results/SourceRangeTest.py",
-    "/home/tushar/coala/tests/results/TextPositionTest.py",
-    "/home/tushar/coala/tests/results/LineDiffTest.py",
-    "/home/tushar/coala/tests/results/result_actions",
-    "/home/tushar/coala/tests/results/RESULT_SEVERITYTest.py",
-    "/home/tushar/coala/tests/results/DiffTest.py",
-    "/home/tushar/coala/tests/results/SourcePositionTest.py"
-  ],
-  "/home/tushar/coala/tests/results/result_actions": [
-    "/home/tushar/coala/tests/results/result_actions/PrintMoreInfoActionTest.py",
-    "/home/tushar/coala/tests/results/result_actions/ApplyPatchActionTest.py",
-    "/home/tushar/coala/tests/results/result_actions/ShowPatchActionTest.py",
-    "/home/tushar/coala/tests/results/result_actions/ResultActionTest.py",
-    "/home/tushar/coala/tests/results/result_actions/PrintDebugMessageActionTest.py",
-    "/home/tushar/coala/tests/results/result_actions/OpenEditorActionTest.py",
-    "/home/tushar/coala/tests/results/result_actions/__init__.py"
-  ],
-  "/home/tushar/coala/tests/settings": [
-    "/home/tushar/coala/tests/settings/DocstringMetadataTest.py",
-    "/home/tushar/coala/tests/settings/FunctionMetadataTest.py",
-    "/home/tushar/coala/tests/settings/SectionTest.py",
-    "/home/tushar/coala/tests/settings/SettingTest.py",
-    "/home/tushar/coala/tests/settings/SectionFillingTest.py",
-    "/home/tushar/coala/tests/settings/ConfigurationGatheringTest.py",
-    "/home/tushar/coala/tests/settings/__init__.py"
-  ],
-  "/home/tushar/coala/tests/test_bears": [
-    "/home/tushar/coala/tests/test_bears/LineCountTestBear.py",
-    "/home/tushar/coala/tests/test_bears/JavaTestBear.py",
-    "/home/tushar/coala/tests/test_bears/internal_folder",
-    "/home/tushar/coala/tests/test_bears/__init__.py",
-    "/home/tushar/coala/tests/test_bears/LinterBear.py"
-  ],
-  "/home/tushar/coala/tests/test_bears/internal_folder": [
-    "/home/tushar/coala/tests/test_bears/internal_folder/__init__.py",
-    "/home/tushar/coala/tests/test_bears/internal_folder/SpaceConsistencyTestBear.py"
-  ]
+    "/home/tushar/coala": [
+        "/home/tushar/coala/coalib",
+        "/home/tushar/coala/CONTRIBUTING.md",
+        "/home/tushar/coala/conftest.py",
+        "/home/tushar/coala/tests",
+        "/home/tushar/coala/docs",
+        "/home/tushar/coala/setup.py",
+        "/home/tushar/coala/coala",
+        "/home/tushar/coala/README.rst"
+    ],
+    "/home/tushar/coala/coalib": [
+        "/home/tushar/coala/coalib/bearlib",
+        "/home/tushar/coala/coalib/bears",
+        "/home/tushar/coala/coalib/coala_dbus.py",
+        "/home/tushar/coala/coalib/collecting",
+        "/home/tushar/coala/coalib/coala.py",
+        "/home/tushar/coala/coalib/results",
+        "/home/tushar/coala/coalib/coala_main.py",
+        "/home/tushar/coala/coalib/misc",
+        "/home/tushar/coala/coalib/__init__.py",
+        "/home/tushar/coala/coalib/output",
+        "/home/tushar/coala/coalib/coala_ci.py",
+        "/home/tushar/coala/coalib/parsing",
+        "/home/tushar/coala/coalib/coala_delete_orig.py",
+        "/home/tushar/coala/coalib/coala_json.py",
+        "/home/tushar/coala/coalib/coala_format.py",
+        "/home/tushar/coala/coalib/processes",
+        "/home/tushar/coala/coalib/settings"
+    ],
+    "/home/tushar/coala/coalib/bearlib": [
+        "/home/tushar/coala/coalib/bearlib/languages",
+        "/home/tushar/coala/coalib/bearlib/abstractions",
+        "/home/tushar/coala/coalib/bearlib/spacing",
+        "/home/tushar/coala/coalib/bearlib/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/bearlib/abstractions": [
+        "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+        "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+        "/home/tushar/coala/coalib/bearlib/abstractions/SectionCreatable.py",
+        "/home/tushar/coala/coalib/bearlib/abstractions/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/bearlib/languages": [
+        "/home/tushar/coala/coalib/bearlib/languages/definitions",
+        "/home/tushar/coala/coalib/bearlib/languages/documentation",
+        "/home/tushar/coala/coalib/bearlib/languages/LanguageDefinition.py",
+        "/home/tushar/coala/coalib/bearlib/languages/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/bearlib/languages/definitions": [
+        "/home/tushar/coala/coalib/bearlib/languages/definitions/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/bearlib/languages/documentation": [
+        "/home/tushar/coala/coalib/bearlib/languages/documentation/DocumentationExtraction.py",
+        "/home/tushar/coala/coalib/bearlib/languages/documentation/DocumentationComment.py",
+        "/home/tushar/coala/coalib/bearlib/languages/documentation/DocstyleDefinition.py",
+        "/home/tushar/coala/coalib/bearlib/languages/documentation/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/bearlib/spacing": [
+        "/home/tushar/coala/coalib/bearlib/spacing/SpacingHelper.py",
+        "/home/tushar/coala/coalib/bearlib/spacing/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/bears": [
+        "/home/tushar/coala/coalib/bears/LocalBear.py",
+        "/home/tushar/coala/coalib/bears/BEAR_KIND.py",
+        "/home/tushar/coala/coalib/bears/Bear.py",
+        "/home/tushar/coala/coalib/bears/__init__.py",
+        "/home/tushar/coala/coalib/bears/GlobalBear.py"
+    ],
+    "/home/tushar/coala/coalib/collecting": [
+        "/home/tushar/coala/coalib/collecting/Dependencies.py",
+        "/home/tushar/coala/coalib/collecting/Importers.py",
+        "/home/tushar/coala/coalib/collecting/__init__.py",
+        "/home/tushar/coala/coalib/collecting/Collectors.py"
+    ],
+    "/home/tushar/coala/coalib/misc": [
+        "/home/tushar/coala/coalib/misc/Exceptions.py",
+        "/home/tushar/coala/coalib/misc/MutableValue.py",
+        "/home/tushar/coala/coalib/misc/Constants.py",
+        "/home/tushar/coala/coalib/misc/BuildManPage.py",
+        "/home/tushar/coala/coalib/misc/__init__.py",
+        "/home/tushar/coala/coalib/misc/ContextManagers.py",
+        "/home/tushar/coala/coalib/misc/StringConverter.py",
+        "/home/tushar/coala/coalib/misc/DictUtilities.py",
+        "/home/tushar/coala/coalib/misc/Annotations.py",
+        "/home/tushar/coala/coalib/misc/Enum.py",
+        "/home/tushar/coala/coalib/misc/Future.py",
+        "/home/tushar/coala/coalib/misc/Shell.py"
+    ],
+    "/home/tushar/coala/coalib/output": [
+        "/home/tushar/coala/coalib/output/ConsoleInteraction.py",
+        "/home/tushar/coala/coalib/output/ConfWriter.py",
+        "/home/tushar/coala/coalib/output/JSONEncoder.py",
+        "/home/tushar/coala/coalib/output/dbus",
+        "/home/tushar/coala/coalib/output/__init__.py",
+        "/home/tushar/coala/coalib/output/Interactions.py",
+        "/home/tushar/coala/coalib/output/printers",
+        "/home/tushar/coala/coalib/output/Tagging.py"
+    ],
+    "/home/tushar/coala/coalib/output/dbus": [
+        "/home/tushar/coala/coalib/output/dbus/BuildDbusService.py",
+        "/home/tushar/coala/coalib/output/dbus/__init__.py",
+        "/home/tushar/coala/coalib/output/dbus/DbusDocument.py",
+        "/home/tushar/coala/coalib/output/dbus/DbusServer.py",
+        "/home/tushar/coala/coalib/output/dbus/DbusApp.py"
+    ],
+    "/home/tushar/coala/coalib/output/printers": [
+        "/home/tushar/coala/coalib/output/printers/LOG_LEVEL.py",
+        "/home/tushar/coala/coalib/output/printers/LogPrinter.py",
+        "/home/tushar/coala/coalib/output/printers/__init__.py",
+        "/home/tushar/coala/coalib/output/printers/ListLogPrinter.py"
+    ],
+    "/home/tushar/coala/coalib/parsing": [
+        "/home/tushar/coala/coalib/parsing/StringProcessing",
+        "/home/tushar/coala/coalib/parsing/DefaultArgParser.py",
+        "/home/tushar/coala/coalib/parsing/LineParser.py",
+        "/home/tushar/coala/coalib/parsing/ConfParser.py",
+        "/home/tushar/coala/coalib/parsing/CliParsing.py",
+        "/home/tushar/coala/coalib/parsing/__init__.py",
+        "/home/tushar/coala/coalib/parsing/Globbing.py"
+    ],
+    "/home/tushar/coala/coalib/parsing/StringProcessing": [
+        "/home/tushar/coala/coalib/parsing/StringProcessing/Core.py",
+        "/home/tushar/coala/coalib/parsing/StringProcessing/Match.py",
+        "/home/tushar/coala/coalib/parsing/StringProcessing/InBetweenMatch.py",
+        "/home/tushar/coala/coalib/parsing/StringProcessing/__init__.py",
+        "/home/tushar/coala/coalib/parsing/StringProcessing/Filters.py"
+    ],
+    "/home/tushar/coala/coalib/processes": [
+        "/home/tushar/coala/coalib/processes/communication",
+        "/home/tushar/coala/coalib/processes/Processing.py",
+        "/home/tushar/coala/coalib/processes/LogPrinterThread.py",
+        "/home/tushar/coala/coalib/processes/CONTROL_ELEMENT.py",
+        "/home/tushar/coala/coalib/processes/BearRunning.py",
+        "/home/tushar/coala/coalib/processes/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/processes/communication": [
+        "/home/tushar/coala/coalib/processes/communication/__init__.py",
+        "/home/tushar/coala/coalib/processes/communication/LogMessage.py"
+    ],
+    "/home/tushar/coala/coalib/results": [
+        "/home/tushar/coala/coalib/results/Result.py",
+        "/home/tushar/coala/coalib/results/ResultFilter.py",
+        "/home/tushar/coala/coalib/results/__init__.py",
+        "/home/tushar/coala/coalib/results/LineDiff.py",
+        "/home/tushar/coala/coalib/results/AbsolutePosition.py",
+        "/home/tushar/coala/coalib/results/HiddenResult.py",
+        "/home/tushar/coala/coalib/results/TextRange.py",
+        "/home/tushar/coala/coalib/results/SourceRange.py",
+        "/home/tushar/coala/coalib/results/RESULT_SEVERITY.py",
+        "/home/tushar/coala/coalib/results/Diff.py",
+        "/home/tushar/coala/coalib/results/SourcePosition.py",
+        "/home/tushar/coala/coalib/results/result_actions",
+        "/home/tushar/coala/coalib/results/TextPosition.py"
+    ],
+    "/home/tushar/coala/coalib/results/result_actions": [
+        "/home/tushar/coala/coalib/results/result_actions/PrintMoreInfoAction.py",
+        "/home/tushar/coala/coalib/results/result_actions/ResultAction.py",
+        "/home/tushar/coala/coalib/results/result_actions/OpenEditorAction.py",
+        "/home/tushar/coala/coalib/results/result_actions/ApplyPatchAction.py",
+        "/home/tushar/coala/coalib/results/result_actions/PrintDebugMessageAction.py",
+        "/home/tushar/coala/coalib/results/result_actions/ShowPatchAction.py",
+        "/home/tushar/coala/coalib/results/result_actions/__init__.py"
+    ],
+    "/home/tushar/coala/coalib/settings": [
+        "/home/tushar/coala/coalib/settings/Setting.py",
+        "/home/tushar/coala/coalib/settings/ConfigurationGathering.py",
+        "/home/tushar/coala/coalib/settings/Section.py",
+        "/home/tushar/coala/coalib/settings/FunctionMetadata.py",
+        "/home/tushar/coala/coalib/settings/DocstringMetadata.py",
+        "/home/tushar/coala/coalib/settings/__init__.py",
+        "/home/tushar/coala/coalib/settings/SectionFilling.py"
+    ],
+    "/home/tushar/coala/docs": [
+        "/home/tushar/coala/docs/index.rst",
+        "/home/tushar/coala/docs/General_Dev_Info",
+        "/home/tushar/coala/docs/Users",
+        "/home/tushar/coala/docs/Getting_Involved"
+    ],
+    "/home/tushar/coala/docs/General_Dev_Info": [
+        "/home/tushar/coala/docs/General_Dev_Info/git_tutorial_1.rst"
+    ],
+    "/home/tushar/coala/docs/Getting_Involved": [
+        "/home/tushar/coala/docs/Getting_Involved/Newcomers.rst",
+        "/home/tushar/coala/docs/Getting_Involved/MAC_Hints.rst",
+        "/home/tushar/coala/docs/Getting_Involved/Review.rst",
+        "/home/tushar/coala/docs/Getting_Involved/Writing_Tests.rst",
+        "/home/tushar/coala/docs/Getting_Involved/Testing.rst",
+        "/home/tushar/coala/docs/Getting_Involved/Writing_Good_Commits.rst",
+        "/home/tushar/coala/docs/Getting_Involved/README.rst",
+        "/home/tushar/coala/docs/Getting_Involved/Writing_Documentation.rst",
+        "/home/tushar/coala/docs/Getting_Involved/Codestyle.rst"
+    ],
+    "/home/tushar/coala/docs/Users": [
+        "/home/tushar/coala/docs/Users/Glob_Patterns.rst",
+        "/home/tushar/coala/docs/Users/Install.rst",
+        "/home/tushar/coala/docs/Users/Exit_Codes.rst",
+        "/home/tushar/coala/docs/Users/coafile.rst",
+        "/home/tushar/coala/docs/Users/Tutorials",
+        "/home/tushar/coala/docs/Users/Git_Hooks.rst",
+        "/home/tushar/coala/docs/Users/External_APIs.rst"
+    ],
+    "/home/tushar/coala/docs/Users/Tutorials": [
+        "/home/tushar/coala/docs/Users/Tutorials/Self_Correcting_Bears.rst",
+        "/home/tushar/coala/docs/Users/Tutorials/Writing_Bears.rst",
+        "/home/tushar/coala/docs/Users/Tutorials/Tutorial.rst",
+        "/home/tushar/coala/docs/Users/Tutorials/Linter_Bears.rst",
+        "/home/tushar/coala/docs/Users/Tutorials/Auto_Completion.rst",
+        "/home/tushar/coala/docs/Users/Tutorials/Testing_Bears.rst",
+        "/home/tushar/coala/docs/Users/Tutorials/Git_Help.rst"
+    ],
+    "/home/tushar/coala/tests": [
+        "/home/tushar/coala/tests/bearlib",
+        "/home/tushar/coala/tests/bears",
+        "/home/tushar/coala/tests/misc",
+        "/home/tushar/coala/tests/results",
+        "/home/tushar/coala/tests/collecting",
+        "/home/tushar/coala/tests/coalaJSONTest.py",
+        "/home/tushar/coala/tests/coalaTest.py",
+        "/home/tushar/coala/tests/test_bears",
+        "/home/tushar/coala/tests/TestUtilities.py",
+        "/home/tushar/coala/tests/__init__.py",
+        "/home/tushar/coala/tests/output",
+        "/home/tushar/coala/tests/coalaDbusTest.py",
+        "/home/tushar/coala/tests/parsing",
+        "/home/tushar/coala/tests/coalaCITest.py",
+        "/home/tushar/coala/tests/coalaFormatTest.py",
+        "/home/tushar/coala/tests/coalaDeleteOrigTest.py",
+        "/home/tushar/coala/tests/processes",
+        "/home/tushar/coala/tests/settings"
+    ],
+    "/home/tushar/coala/tests/bearlib": [
+        "/home/tushar/coala/tests/bearlib/languages",
+        "/home/tushar/coala/tests/bearlib/spacing",
+        "/home/tushar/coala/tests/bearlib/parsing",
+        "/home/tushar/coala/tests/bearlib/abstractions",
+        "/home/tushar/coala/tests/bearlib/__init__.py"
+    ],
+    "/home/tushar/coala/tests/bearlib/abstractions": [
+        "/home/tushar/coala/tests/bearlib/abstractions/LintTest.py",
+        "/home/tushar/coala/tests/bearlib/abstractions/LinterTest.py",
+        "/home/tushar/coala/tests/bearlib/abstractions/linter_test_files",
+        "/home/tushar/coala/tests/bearlib/abstractions/__init__.py",
+        "/home/tushar/coala/tests/bearlib/abstractions/SectionCreatableTest.py"
+    ],
+    "/home/tushar/coala/tests/bearlib/abstractions/linter_test_files": [
+        "/home/tushar/coala/tests/bearlib/abstractions/linter_test_files/test_linter.py"
+    ],
+    "/home/tushar/coala/tests/bearlib/languages": [
+        "/home/tushar/coala/tests/bearlib/languages/documentation",
+        "/home/tushar/coala/tests/bearlib/languages/__init__.py",
+        "/home/tushar/coala/tests/bearlib/languages/LanguageDefinitionTest.py"
+    ],
+    "/home/tushar/coala/tests/bearlib/languages/documentation": [
+        "/home/tushar/coala/tests/bearlib/languages/documentation/DocumentationCommentTest.py",
+        "/home/tushar/coala/tests/bearlib/languages/documentation/DocstyleDefinitionTest.py",
+        "/home/tushar/coala/tests/bearlib/languages/documentation/DocumentationExtractionTest.py"
+    ],
+    "/home/tushar/coala/tests/bearlib/parsing": [
+        "/home/tushar/coala/tests/bearlib/parsing/__init__.py"
+    ],
+    "/home/tushar/coala/tests/bearlib/spacing": [
+        "/home/tushar/coala/tests/bearlib/spacing/SpacingHelperTest.py",
+        "/home/tushar/coala/tests/bearlib/spacing/__init__.py"
+    ],
+    "/home/tushar/coala/tests/bears": [
+        "/home/tushar/coala/tests/bears/GlobalBearTest.py",
+        "/home/tushar/coala/tests/bears/BearTest.py",
+        "/home/tushar/coala/tests/bears/LocalBearTest.py",
+        "/home/tushar/coala/tests/bears/__init__.py"
+    ],
+    "/home/tushar/coala/tests/collecting": [
+        "/home/tushar/coala/tests/collecting/importers_test_dir",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir",
+        "/home/tushar/coala/tests/collecting/DependenciesTest.py",
+        "/home/tushar/coala/tests/collecting/ImportersTest.py",
+        "/home/tushar/coala/tests/collecting/CollectorsTest.py",
+        "/home/tushar/coala/tests/collecting/__init__.py"
+    ],
+    "/home/tushar/coala/tests/collecting/collectors_test_dir": [
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/others",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global"
+    ],
+    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears": [
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears/metabear.py",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears/bear2.py",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears/bear1.py"
+    ],
+    "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global": [
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global/bears1.py",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/bears_local_global/bears2.py"
+    ],
+    "/home/tushar/coala/tests/collecting/collectors_test_dir/others": [
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files"
+    ],
+    "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files": [
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files/file1.py",
+        "/home/tushar/coala/tests/collecting/collectors_test_dir/others/py_files/file2.py"
+    ],
+    "/home/tushar/coala/tests/collecting/importers_test_dir": [
+        "/home/tushar/coala/tests/collecting/importers_test_dir/file_one.py",
+        "/home/tushar/coala/tests/collecting/importers_test_dir/file_two.py"
+    ],
+    "/home/tushar/coala/tests/misc": [
+        "/home/tushar/coala/tests/misc/BuildManPageTest.py",
+        "/home/tushar/coala/tests/misc/StringConverterTest.py",
+        "/home/tushar/coala/tests/misc/AnnotationsTest.py",
+        "/home/tushar/coala/tests/misc/run_shell_command_testfiles",
+        "/home/tushar/coala/tests/misc/DictUtilitiesTest.py",
+        "/home/tushar/coala/tests/misc/EnumTest.py",
+        "/home/tushar/coala/tests/misc/DecoratorsTest.py",
+        "/home/tushar/coala/tests/misc/ContextManagersTest.py",
+        "/home/tushar/coala/tests/misc/ShellTest.py",
+        "/home/tushar/coala/tests/misc/ExceptionsTest.py",
+        "/home/tushar/coala/tests/misc/__init__.py"
+    ],
+    "/home/tushar/coala/tests/misc/run_shell_command_testfiles": [
+        "/home/tushar/coala/tests/misc/run_shell_command_testfiles/test_program.py",
+        "/home/tushar/coala/tests/misc/run_shell_command_testfiles/test_input_program.py",
+        "/home/tushar/coala/tests/misc/run_shell_command_testfiles/test_interactive_program.py"
+    ],
+    "/home/tushar/coala/tests/output": [
+        "/home/tushar/coala/tests/output/TaggingTest.py",
+        "/home/tushar/coala/tests/output/JSONEncoderTest.py",
+        "/home/tushar/coala/tests/output/printers",
+        "/home/tushar/coala/tests/output/ConfWriterTest.py",
+        "/home/tushar/coala/tests/output/InteractionsTest.py",
+        "/home/tushar/coala/tests/output/ConsoleInteractionTest.py",
+        "/home/tushar/coala/tests/output/__init__.py",
+        "/home/tushar/coala/tests/output/dbus"
+    ],
+    "/home/tushar/coala/tests/output/dbus": [
+        "/home/tushar/coala/tests/output/dbus/dbus_test_files",
+        "/home/tushar/coala/tests/output/dbus/DbusAppTest.py",
+        "/home/tushar/coala/tests/output/dbus/BuildDbusServiceTest.py",
+        "/home/tushar/coala/tests/output/dbus/DbusServerTest.py",
+        "/home/tushar/coala/tests/output/dbus/DbusTest.py",
+        "/home/tushar/coala/tests/output/dbus/__init__.py",
+        "/home/tushar/coala/tests/output/dbus/DbusDocumentTest.py"
+    ],
+    "/home/tushar/coala/tests/output/dbus/dbus_test_files": [
+        "/home/tushar/coala/tests/output/dbus/dbus_test_files/GlobalTestBear.py",
+        "/home/tushar/coala/tests/output/dbus/dbus_test_files/LocalTestBear.py"
+    ],
+    "/home/tushar/coala/tests/output/printers": [
+        "/home/tushar/coala/tests/output/printers/LogPrinterTest.py",
+        "/home/tushar/coala/tests/output/printers/ListLogPrinterTest.py",
+        "/home/tushar/coala/tests/output/printers/__init__.py"
+    ],
+    "/home/tushar/coala/tests/parsing": [
+        "/home/tushar/coala/tests/parsing/StringProcessing",
+        "/home/tushar/coala/tests/parsing/ConfParserTest.py",
+        "/home/tushar/coala/tests/parsing/GlobbingTest.py",
+        "/home/tushar/coala/tests/parsing/GlobTestDir",
+        "/home/tushar/coala/tests/parsing/CliParsingTest.py",
+        "/home/tushar/coala/tests/parsing/LineParserTest.py",
+        "/home/tushar/coala/tests/parsing/__init__.py"
+    ],
+    "/home/tushar/coala/tests/parsing/GlobTestDir": [
+        "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1"
+    ],
+    "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1": [
+        "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1/File11.py",
+        "/home/tushar/coala/tests/parsing/GlobTestDir/SubDir1/File12.py"
+    ],
+    "/home/tushar/coala/tests/parsing/StringProcessing": [
+        "/home/tushar/coala/tests/parsing/StringProcessing/SearchForTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedSearchInBetweenTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/PositionIsEscapedTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/InBetweenMatchTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/ConvertToRawTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/SearchInBetweenTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/NestedSearchInBetweenTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedSearchForTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/UnescapeTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/LimitTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedSplitTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/UnescapedStripTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/MatchTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/__init__.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/SplitTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/EscapeTest.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/StringProcessingTestBase.py",
+        "/home/tushar/coala/tests/parsing/StringProcessing/TrimEmptyMatchesTest.py"
+    ],
+    "/home/tushar/coala/tests/processes": [
+        "/home/tushar/coala/tests/processes/BearRunningTest.py",
+        "/home/tushar/coala/tests/processes/communication",
+        "/home/tushar/coala/tests/processes/LogPrinterThreadTest.py",
+        "/home/tushar/coala/tests/processes/ProcessingTest.py",
+        "/home/tushar/coala/tests/processes/section_executor_test_files",
+        "/home/tushar/coala/tests/processes/__init__.py"
+    ],
+    "/home/tushar/coala/tests/processes/communication": [
+        "/home/tushar/coala/tests/processes/communication/LogMessageTest.py",
+        "/home/tushar/coala/tests/processes/communication/__init__.py"
+    ],
+    "/home/tushar/coala/tests/processes/section_executor_test_files": [
+        "/home/tushar/coala/tests/processes/section_executor_test_files/ProcessingLocalTestBear.py",
+        "/home/tushar/coala/tests/processes/section_executor_test_files/ProcessingGlobalTestBear.py"
+    ],
+    "/home/tushar/coala/tests/results": [
+        "/home/tushar/coala/tests/results/EnsureFilesPresentTest.py",
+        "/home/tushar/coala/tests/results/ResultFilterTest.py",
+        "/home/tushar/coala/tests/results/AbsolutePositionTest.py",
+        "/home/tushar/coala/tests/results/HiddenResultTest.py",
+        "/home/tushar/coala/tests/results/TextRangeTest.py",
+        "/home/tushar/coala/tests/results/ResultTest.py",
+        "/home/tushar/coala/tests/results/__init__.py",
+        "/home/tushar/coala/tests/results/SourceRangeTest.py",
+        "/home/tushar/coala/tests/results/TextPositionTest.py",
+        "/home/tushar/coala/tests/results/LineDiffTest.py",
+        "/home/tushar/coala/tests/results/result_actions",
+        "/home/tushar/coala/tests/results/RESULT_SEVERITYTest.py",
+        "/home/tushar/coala/tests/results/DiffTest.py",
+        "/home/tushar/coala/tests/results/SourcePositionTest.py"
+    ],
+    "/home/tushar/coala/tests/results/result_actions": [
+        "/home/tushar/coala/tests/results/result_actions/PrintMoreInfoActionTest.py",
+        "/home/tushar/coala/tests/results/result_actions/ApplyPatchActionTest.py",
+        "/home/tushar/coala/tests/results/result_actions/ShowPatchActionTest.py",
+        "/home/tushar/coala/tests/results/result_actions/ResultActionTest.py",
+        "/home/tushar/coala/tests/results/result_actions/PrintDebugMessageActionTest.py",
+        "/home/tushar/coala/tests/results/result_actions/OpenEditorActionTest.py",
+        "/home/tushar/coala/tests/results/result_actions/__init__.py"
+    ],
+    "/home/tushar/coala/tests/settings": [
+        "/home/tushar/coala/tests/settings/DocstringMetadataTest.py",
+        "/home/tushar/coala/tests/settings/FunctionMetadataTest.py",
+        "/home/tushar/coala/tests/settings/SectionTest.py",
+        "/home/tushar/coala/tests/settings/SettingTest.py",
+        "/home/tushar/coala/tests/settings/SectionFillingTest.py",
+        "/home/tushar/coala/tests/settings/ConfigurationGatheringTest.py",
+        "/home/tushar/coala/tests/settings/__init__.py"
+    ],
+    "/home/tushar/coala/tests/test_bears": [
+        "/home/tushar/coala/tests/test_bears/LineCountTestBear.py",
+        "/home/tushar/coala/tests/test_bears/JavaTestBear.py",
+        "/home/tushar/coala/tests/test_bears/internal_folder",
+        "/home/tushar/coala/tests/test_bears/__init__.py",
+        "/home/tushar/coala/tests/test_bears/LinterBear.py"
+    ],
+    "/home/tushar/coala/tests/test_bears/internal_folder": [
+        "/home/tushar/coala/tests/test_bears/internal_folder/__init__.py",
+        "/home/tushar/coala/tests/test_bears/internal_folder/SpaceConsistencyTestBear.py"
+    ]
 }
