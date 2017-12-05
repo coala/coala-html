@@ -1,0 +1,244 @@
+{
+    "logs": [],
+    "results": {
+        "autopep8": [
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/setup.py",
+                            "line": 40
+                        },
+                        "file": "/home/tushar/coala/setup.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/setup.py",
+                            "line": 40
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/setup.py": "--- \n+++ \n@@ -37,7 +37,7 @@\n     def run_tests(self):\n         # import here, cause outside the eggs aren't loaded\n         import pytest\n-        errno=pytest.main([])\n+        errno = pytest.main([])\n         sys.exit(errno)\n \n \n"
+                },
+                "id": 128513129098714833702855522352134842758,
+                "message": "The code does not comply to PEP8.",
+                "origin": "PEP8Bear",
+                "severity": 1
+            },
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/setup.py",
+                            "line": 55
+                        },
+                        "file": "/home/tushar/coala/setup.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/setup.py",
+                            "line": 55
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/setup.py": "--- \n+++ \n@@ -52,7 +52,7 @@\n \n \n # Generate API documentation only if we are running on readthedocs.org\n-on_rtd = getenv('READTHEDOCS',None) != None\n+on_rtd = getenv('READTHEDOCS', None) != None\n if on_rtd:\n     call(BuildDocsCommand.apidoc_command)\n     if \"dev\" in VERSION:\n"
+                },
+                "id": 220844708669848546336024017748002991458,
+                "message": "The code does not comply to PEP8.",
+                "origin": "PEP8Bear",
+                "severity": 1
+            },
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 19
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 19
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py": "--- \n+++ \n@@ -17,6 +17,7 @@\n from coalib.results.RESULT_SEVERITY import RESULT_SEVERITY\n from coalib.settings.FunctionMetadata import FunctionMetadata\n import random\n+\n \n def _prepare_options(options):\n     \"\"\"\n"
+                },
+                "id": 64142406099470778484896820065771046146,
+                "message": "The code does not comply to PEP8.",
+                "origin": "PEP8Bear",
+                "severity": 1
+            },
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 66
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 66
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py": "--- \n+++ \n@@ -63,7 +63,8 @@\n         # used in the output_regex, throw an exception.\n         if \"severity_map\" in options:\n             if \"severity\" not in options[\"output_regex\"].groupindex:\n-                raise ValueError(\"Provided `severity_map` but named group `severity` is not used in `output_regex`.\")\n+                raise ValueError(\n+                    \"Provided `severity_map` but named group `severity` is not used in `output_regex`.\")\n             assert_right_type(options[\"severity_map\"], dict, \"severity_map\")\n \n             for key, value in options[\"severity_map\"].items():\n"
+                },
+                "id": 93407949061823642641754365234143235714,
+                "message": "The code does not comply to PEP8.",
+                "origin": "PEP8Bear",
+                "severity": 1
+            },
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                            "line": 98
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                            "line": 98
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py": "--- \n+++ \n@@ -95,7 +95,7 @@\n     arguments = \"\"\n     output_regex = re.compile(r'(?P<line>\\d+)\\.(?P<column>\\d+)\\|'\n                               r'(?P<severity>\\d+): (?P<message>.*)')\n-    diff_message='No result message was set'\n+    diff_message = 'No result message was set'\n     diff_severity = RESULT_SEVERITY.NORMAL\n     use_stderr = False\n     use_stdin = False\n"
+                },
+                "id": 334503378394168240782307596312089478034,
+                "message": "The code does not comply to PEP8.",
+                "origin": "PEP8Bear",
+                "severity": 1
+            }
+        ],
+        "commit": [],
+        "default": [],
+        "docs": [],
+        "linelength": [
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": 118,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 66
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                        "start": {
+                            "column": 81,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 66
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": null,
+                "id": 313292249232415495114569804674025714280,
+                "message": "Line is longer than allowed. (117 > 80)",
+                "origin": "LineLengthBear",
+                "severity": 1
+            },
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": 99,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                            "line": 24
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                        "start": {
+                            "column": 81,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                            "line": 24
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": null,
+                "id": 276447413445836654103514910293537571143,
+                "message": "Line is longer than allowed. (98 > 80)",
+                "origin": "LineLengthBear",
+                "severity": 1
+            }
+        ],
+        "python": [
+            {
+                "additional_info": "",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 19
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py",
+                            "line": 19
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/coalib/bearlib/abstractions/Linter.py": "--- \n+++ \n@@ -16,7 +16,6 @@\n from coalib.results.Result import Result\n from coalib.results.RESULT_SEVERITY import RESULT_SEVERITY\n from coalib.settings.FunctionMetadata import FunctionMetadata\n-import random\n \n def _prepare_options(options):\n     \"\"\"\n"
+                },
+                "id": 27576339734624758893272183137499260063,
+                "message": "This file contains unused source code.",
+                "origin": "PyUnusedCodeBear",
+                "severity": 1
+            },
+            {
+                "additional_info": "Your source code contains trailing whitespaces. Those usually have no meaning. Please consider removing them.",
+                "affected_code": [
+                    {
+                        "end": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                            "line": 24
+                        },
+                        "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                        "start": {
+                            "column": null,
+                            "file": "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py",
+                            "line": 24
+                        }
+                    }
+                ],
+                "debug_msg": "",
+                "diffs": {
+                    "/home/tushar/coala/coalib/bearlib/abstractions/Lint.py": "--- \n+++ \n@@ -21,7 +21,7 @@\n \n     :param path:  The path to make ready for shell.\n     :param shell: The shell platform to escape the path argument for. Possible\n-                  values are \"sh\", \"powershell\", and \"cmd\" (others will be ignored and return the \n+                  values are \"sh\", \"powershell\", and \"cmd\" (others will be ignored and return the\n                   given path without modification).\n     :return:      The escaped path argument.\n     \"\"\"\n"
+                },
+                "id": 66311072995879679670251562254698337627,
+                "message": "Line contains following spacing inconsistencies:\n- Trailing whitespaces.",
+                "origin": "SpaceConsistencyBear",
+                "severity": 1
+            }
+        ]
+    }
+}

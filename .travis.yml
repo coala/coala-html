@@ -1,0 +1,46 @@
+sudo: required
+dist: trusty
+
+env:
+  global:
+    - ENCRYPTION_LABEL: "79272d66a36b"
+    - COMMIT_AUTHOR_EMAIL: "travis@coala.io"
+
+language: python
+node_js:
+  - "4.1"
+python:
+  - "3.4"
+
+services: docker
+
+cache:
+  pip: true
+  directories:
+    - node_modules
+    - coalahtml/_coalahtml/bower_components
+
+install:
+  - npm install -g bower
+  - npm install
+  - cd coalahtml/_coalahtml
+  - bower install
+  - cd -
+  # colorama needs to be upgraded to fix error when installed colorama
+  # version and required are different.
+  - pip install colorama==0.3.7
+  - pip install -r requirements.txt
+  - pip install -r test-requirements.txt
+
+script:
+  - npm test
+  - python -m pytest --cov
+  - codecov
+  - docker run --volume=$(pwd):/app --workdir=/app coala/base coala-ci
+
+after_success:
+  - python3 setup.py install
+  - bash ./.ci/deploy.sh
+
+notifications:
+  email: false

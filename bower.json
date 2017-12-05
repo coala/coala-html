@@ -1,0 +1,10 @@
+{
+  "name": "coala-html",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "google-code-prettify": "^1.0.5",
+    "angular-sanitize": "^1.6.5",
+    "materialize": "^0.100.1"
+  }
+}
