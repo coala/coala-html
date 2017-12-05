@@ -3,7 +3,7 @@ dist: trusty
 
 env:
   global:
-    - ENCRYPTION_LABEL: "79272d66a36b"
+    - ENCRYPTION_LABEL: "991eb1667e02"
     - COMMIT_AUTHOR_EMAIL: "travis@coala.io"
 
 language: python
