@@ -1,0 +1,12 @@
+<div class="logs">
+  <div class="card log" ng-repeat="log_message in data | filter:q">
+    <span class="log-level label
+                 label-{{ LOG_LEVEL_TO_BOOTSTRAP[log_message.log_level] }}">
+      {{ LOG_LEVELS[log_message.log_level] }}
+    </span>
+    <span class="log-message">{{ log_message.message }}</span>
+  </div>
+</div>
+<div ng-hide="logsCount">
+  <h3>No logs found.</h2>
+</div>
