@@ -30,7 +30,7 @@ coala-html is an angular application used to display results from
 
 If you want to learn more about coala, its functionality and its usage,
 please take a look at our
-`tutorial <http://coala.readthedocs.org/en/latest/Getting_Involved/README.html>`__.
+`tutorial <http://api.coala.io/en/latest/index.html>`__.
 
 REPORT
 ------
