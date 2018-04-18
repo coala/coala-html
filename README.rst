@@ -34,7 +34,7 @@ please take a look at our
 
 REPORT
 ------
-.. image:: https://s11.postimg.org/u2vemkqrn/coala_Demo_Screenshot.png
+.. image:: https://raw.githubusercontent.com/Lavenderjiang/random-file/master/coala-demo-screenshot.png
 
 PROJECT STATUS
 --------------
@@ -91,5 +91,5 @@ your option) any later version.
    :target: https://github.com/coala/coala-html
 .. |Coverage| image:: https://img.shields.io/codecov/c/github/coala/coala-html/master.svg
    :target: https://codecov.io/github/coala/coala-html?branch=master
-.. _GIF: https://cloud.githubusercontent.com/assets/7397433/16225501/8162a2a4-37c4-11e6-96b8-3e37b705c7f3.gif
+.. _GIF: https://raw.githubusercontent.com/Lavenderjiang/random-file/master/coala-html-demo-gif.gif
 .. _Live: http://coala.github.io/coala-html
