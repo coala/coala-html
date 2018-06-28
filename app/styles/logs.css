@@ -1,0 +1,11 @@
+.log {
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.log-message {
+    margin-left: 5px;
+}
