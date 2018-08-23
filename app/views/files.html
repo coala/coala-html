@@ -1,0 +1,60 @@
+<div class="files">
+  <div class="dir-contents" ng-if="fileType === 'dir'">
+    <h3 ng-class="{'dark':!THEME}">
+      Contents of
+      <span ng-repeat= "file in linkNameContainer" class="filename">
+        <a href="{{file.link}}">
+        {{file.name}}</a>
+      </span>
+    </h3>
+    <table class="table table-bordered table-condensed"
+           table-row-links>
+      <tr class="file-previous" ng-if="fileName !== ROOTHOME">
+        <td>
+          <a ng-href="#/file/{{ fileBack }}">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            <span class="file-name">[Previous directory]</span>
+          </a>
+        </td>
+      </tr>
+      <tr ng-repeat="fileContent in fileContents | filter:q | orderBy:'name' " >
+        <td>
+          <a ng-href="#/file/{{ fileContent.name }}">
+            <span class="glyphicon glyphicon-file"
+                  ng-if="fileContent.type === 'file'"></span>
+            <span class="glyphicon glyphicon-folder-open"
+                  ng-if="fileContent.type === 'dir'"></span>
+            <span ng-class="{'dark':!THEME}"
+                  class="file-name">{{ basename(fileContent.name) }}</span>
+            <span class="result-found" ng-if="fileContent.result">
+              <i class="material-icons red-text">error</i></span>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="file-contents" ng-if="fileType === 'file'">
+    <h3 ng-class="{'dark':!THEME}">
+      Contents of
+      <span ng-class="{'dark':!THEME}"
+        ng-repeat= "file in linkNameContainer" class="filename">
+        <a href="{{file.link}}">
+        {{file.name}}</a>
+      </span>
+    </h3>
+    <table class="table table-bordered table-condensed"
+           table-row-links>
+      <tr class="file-previous" ng-if="fileName !== ROOTHOME">
+        <td>
+          <a ng-href="#/file/{{ fileBack }}">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            <span class="file-name">[Previous directory]</span>
+          </a>
+        </td>
+      </tr>
+    </table>
+    <pre ng-bind-html="fileContents"
+    ng-class="{'dark':!THEME}"
+    class="prettyprint linenums"></pre>
+  </div>
+</div>
