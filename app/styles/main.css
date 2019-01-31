@@ -1,0 +1,142 @@
+.code {
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 2em;
+}
+.origin {
+    color: antiquewhite;
+    margin-left: 5px;
+    background-color: black !important;
+    letter-spacing: 0.1em  !important;
+    padding: .3em .6em;
+}
+.message{
+    color: black;
+}
+.control-label, .help-block {
+  color:white !important;
+}
+#search {
+  color:white;
+}
+.form-group{
+  margin: 2px !important;
+  margin-top:6px !important;
+  margin-left:50px !important;
+}
+.result-badge, .file-badge, .log-badge {
+    padding: 4px 5px;
+    margin-left: 0.5em;
+}
+.result-badge {
+    background-color: #CE6F40;
+}
+.file-badge {
+    background-color: #88C88D;
+}
+.badge {
+  color: white !important;
+}
+.log-badge {
+    background-color: #888DC8;
+}
+.app-body{
+    margin-top: 100px;
+}
+body{
+    line-height: 2em;
+}
+body,html{
+ height:100%;
+}
+.main-content{
+ min-height:100%;
+}
+.io-coala{
+  color:lightgray;
+}
+.text-primary {
+  color: black;
+}
+.label {
+  font-size: 1em  !important;
+  font-weight: 500  !important;
+  letter-spacing: 0.1em  !important;
+  padding: 0.3em 0.6em;
+}
+.label.label-warning {
+    background-color: cadetblue !important;
+    color: white;
+}
+
+/* Light theme */
+body {
+  background-color:white;
+}
+.navbar-default {
+  background-color: #263238!important;
+  border-color: transparent;
+}
+.code {
+  background-color: white;
+  border: 0;
+  border-radius: 0;
+}
+/* Dark theme */
+span.message.dark {
+  color: #ffe4c4 !important;
+}
+span.origin.dark {
+  color: #65f1f3 !important;
+}
+span.text-primary.dark {
+  color: #97e985 !important;
+}
+
+body.dark, div.code.dark {
+  background-color:rgba(66, 81, 76, 0.91) !important;
+}
+div.navbar.dark {
+  background-color: #484747 !important;
+  border-color: transparent !important;
+}
+span.file-name.dark{
+  color:#51e1d3 !important;
+}
+h3.dark{
+  color:#bce4e7; !important;
+}
+.theme-type {
+  color:white;
+  padding: 5px;
+}
+.togglebutton{
+  position: fixed;
+  top: 3%;
+  right: 2%;
+}
+.togglebutton label input[type=checkbox]:checked {
+  background-color: #BDE5A6;
+}
+.togglebutton label input[type=checkbox]:checked + .toggle {
+  background-color: white;
+}
+.togglebutton label .toggle {
+  background-color: rgb(216, 243, 220);
+}
+div.footer-text.dark{
+  text-align: center;
+  font-size: 3em;
+  color: white !important;
+  font-weight: 200;
+}
+span.io-coala.dark{
+  color:darkgray;
+}
+footer .row {
+  line-height: 1.5;
+}
