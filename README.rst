@@ -70,9 +70,99 @@ We appreciate any help!
 BUILD & DEVELOPMENT
 -------------------
 
-Run ``python3 setup.py install``
+1. Installation instructions for **Windows** users:
 
-Note: You need to have bower installed before you may install the python packages.
+   - Clone the **coala-html** repository
+
+     ::
+
+       $ git clone https://github.com/coala/coala-html.git
+
+   - Download and install the latest version of Node.js from `official website
+     <https://nodejs.org/en/download/>`__.
+
+   - Change the directory to **coala-html** and run following command to
+     install dependencies
+
+     ::
+
+       $ python setup.py install
+
+   - Install **coala-bears**
+
+     ::
+
+       $ pip3 install coala-bears
+
+   - Install **bower** to build static web pages
+
+     ::
+
+       $ npm install -g bower --save
+
+
+   - Run **coala-html** to display results from **coala-json**
+
+     ::
+
+       $ coala-html --dir ..\Tests
+
+
+2. Installation instructions for **Linux** users:
+
+   - Clone the **coala-html** repository
+
+     ::
+
+      $ git clone https://github.com/coala/coala-html.git
+
+   - Install `asdf-vm <https://asdf-vm.github.io/asdf/#/core-manage-asdf-vm
+     ?id=install-asdf-vm>`__ by referring to the guide.
+
+   - Add `Node.js <https://github.com/asdf-vm/asdf-nodejs#install>`__ plugin
+     using **asdf-vm** and Install Node.js
+
+     ::
+
+       $ asdf install nodejs <version>
+
+   - *Check Node.js and npm version*
+
+     You can find more details about the current version on Node.js `official
+     website <https://nodejs.org/>`__.
+
+     ::
+
+       $ node -v
+
+       $ npm -v
+
+   - Install **bower** to build static web pages
+
+     ::
+
+       $ npm install -g bower --save
+
+   - Change the directory to **coala-html** and run following command to install
+     dependencies
+
+     ::
+
+       $ python3 setup.py install
+
+   - Install **coala-bears**
+
+     ::
+
+       $ pip3 install coala-bears
+
+   - Run **coala-html** to display results from **coala-json**
+
+     ::
+
+       $ coala-html --dir ./coala_test_results
+
+For more details on using, refer to the usage_ section.
 
 LICENSE
 =======
@@ -93,3 +183,4 @@ your option) any later version.
    :target: https://codecov.io/github/coala/coala-html?branch=master
 .. _GIF: https://cloud.githubusercontent.com/assets/7397433/16225501/8162a2a4-37c4-11e6-96b8-3e37b705c7f3.gif
 .. _Live: http://coala.github.io/coala-html
+.. _usage: https://github.com/coala/coala-html#usage
