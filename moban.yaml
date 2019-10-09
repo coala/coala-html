@@ -1,0 +1,102 @@
+overrides: coala-ci-requirements.yaml
+
+name: coala
+contact: coala.analyzer@gmail.com
+description: Linting and Fixing Code for All Languages
+build_version: 0.12.0.dev99999999999999
+current_version: 0.12.0.dev
+version: 0.12.0.dev
+release: 0.12.0.dev
+branch: master
+command_line_interface: coala
+package_module: coalib
+rtd_maintainer: L.S., F.N., M.K.
+ci_directory: .misc
+docs_dir: docs
+docs_source_dir: ./
+docs_toc: false
+test_py36: true
+allow_generic_no_cover: true
+test_timeout: 60
+travis_sentinel: true
+python_versions:
+  - 3.6
+  - 3.5
+  - 3.4.4
+  - 3.4.2
+# 3.7 excluded due to https://github.com/coala/coala/issues/6028 and others
+test_unsupported_python_versions:
+  - 2.7
+  - 3.3
+  - 3.4.1
+
+entry_points:
+  console_scripts:
+    - coala = coalib.coala:main
+    - coala-ci = coalib.coala_ci:main
+    - coala-json = coalib.coala_json:main
+    - coala-format = coalib.coala_format:main
+    - coala-delete-orig = coalib.coala_delete_orig:main
+
+dependencies:
+  - appdirs~=1.4
+  - cached-property~=1.4.3
+  - cli-helpers~=1.0.2
+  - git+https://gitlab.com/coala/coala-utils#egg=coala-utils-0.7.0
+  - colorlog>=2.7,<4.0
+  - git+https://gitlab.com/jayvdb/package_manager#egg=dependency-management-0.5.0.dev0
+  - packaging>=16.8
+  - Pygments~=2.1
+  - PyPrint~=0.2.6
+  - requests~=2.12
+  - setuptools>=21.2.2
+  - unidiff~=0.5.2
+
+gitignore_extra_rulesets:
+  - node
+
+requires:
+  - type: git
+    url: https://gitlab.com/jayvdb/mobans
+    branch: custom-travis-template
+  - https://github.com/NAStools/homeassistant.git
+
+configuration:
+  template_dir:
+    - .moban.dt/
+    - mobans:templates/
+    - mobans:assets/
+    - homeassistant:homeassistant/util/
+  configuration: .moban.yaml
+  configuration_dir: 'mobans:'
+targets:
+  - Fudgefile: Fudgefile.jj2
+  - .misc/Fudge.ps1: fudge/Fudge.ps1
+  - .misc/Modules/FudgeTools.psm1: fudge/Modules/FudgeTools.psm1
+  - .misc/FudgeCI.ps1: fudge/FudgeCI.ps1
+  - .misc/FudgeGenerateFake.ps1: fudge/FudgeGenerateFake.ps1
+  - .misc/PrepareAVVM.ps1: fudge/PrepareAVVM.ps1
+  - .misc/FudgePostInstall.ps1: fudge/FudgePostInstall.ps1
+  - .misc/store_env_in_registry.py: ci/store_env_in_registry.py
+  - .misc/constants.ps1: constants.ps1.jj2
+  - .misc/deps.python-packages.ps1: fudge/deps.python-packages.ps1
+  - .gitignore: core-gitignore.jj2
+  - .editorconfig: .editorconfig.jj2
+  - setup.py: core-setup.py.jj2
+  - setup.cfg: core-setup.cfg.jj2
+  - requirements.txt: requirements.txt.jj2
+  - test-requirements.txt: core-test-requirements.txt.jj2
+  - tests/conftest.py: conftest.py
+  - coalib/VERSION: VERSION.jj2
+  - runtime.txt: runtime.txt
+  - netlify.toml: docs/netlify.toml
+  - .travis.yml: ci/coala-travis.yml.jj2
+  - .misc/appveyor.yml: ci/appveyor.yml.jj2
+  - .misc/run_with_env.cmd: run_with_env.cmd
+  - .misc/check_unsupported.sh: ci/check_unsupported.sh.jj2
+copy:
+  - .misc/check_setuptools.py: ci/check_setuptools.py
+  # homeassistant license MIT
+  - coalib/misc/Asyncio.py: async.py
+nocover_file_globs:
+  - coalib/misc/Asyncio.py
