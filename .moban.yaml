@@ -1,0 +1,103 @@
+overrides: coala-ci-requirements.yaml
+
+name: mobans
+contact: coala.analyzer@gmail.com
+description: Centralised repo for metadata, templates and assets
+language: python
+python_versions:
+  - 2.7
+  - 3.4.4
+  - 3.5
+  - 3.6
+  - 3.7
+pip_constraints_file: test-requirements.txt
+docs_dir: ''
+docs_output_dir: false
+
+choco_requirements:
+  PSScriptAnalyzer: true
+
+requires:
+  - https://github.com/moremoban/pypi-mobans
+  - https://gitlab.com/coala/package_manager
+  - type: git
+    url: https://github.com/Badgerati/Fudge
+    branch: develop
+  - https://github.com/ogrisel/python-appveyor-demo
+  - https://github.com/MathieuBuisson/PowerShell-DevOps
+  - https://github.com/github/gitignore
+  - https://github.com/coala/artwork
+  - https://github.com/coala/coalaCSS
+configuration:
+  template_dir:
+    - 'pypi-mobans:'
+    - 'python-appveyor-demo:'
+    - 'Fudge:'
+    - 'PowerShell-DevOps:'
+    - 'gitignore:'
+    - 'artwork:'
+    - 'coalaCSS:'
+    - templates/
+    - assets/
+    - 'package_manager:.ci/'
+  configuration: .moban.yaml
+targets:
+  - .gitignore: coala-gitignore.jj2
+  - Fudgefile: Fudgefile.jj2
+  - assets/fudge/constants.ps1: constants.ps1.jj2
+  - .ci/appveyor.yml: ci/appveyor.yml.jj2
+  - .gitlab-ci.yml: ci/gitlab-ci.yml.jj2
+  - setup.cfg: setup.cfg.jj2
+  - test-requirements.txt: test-requirements.txt.jj2
+copy:
+  - templates/gitignore.jj2: templates/gitignore.jj2
+  - templates/setup.py.jj2: templates/setup.py.jj2
+  - templates/ci/travis.yml.jj2: templates/travis.yml.jj2
+  # Imports Windows requirements from package_manager
+  - pm-requirements.yaml: ../pm-requirements.yaml
+  # This copies the pypi-mobans templates locally
+  - templates/requirements.txt.jj2: templates/requirements.txt.jj2
+  # python-appveyor-demo (deprecated by Fudge)
+  # https://github.com/ogrisel/python-appveyor-demo/issues/54
+  - assets/run_with_env.cmd: appveyor/run_with_env.cmd
+  - assets/install.ps1: appveyor/install.ps1
+  # Fudge (default branch is develop)
+  - assets/fudge/Fudge.ps1: src/Fudge.ps1
+  - assets/fudge/Modules/FudgeTools.psm1: src/Modules/FudgeTools.psm1
+  # MathieuBuisson/PowerShell-DevOps
+  - assets/ci/Export-NUnitXml.psm1: Export-NUnitXml/Export-NUnitXml.psm1
+  # gitignore
+  - assets/gitignore/Elisp.gitignore: Elisp.gitignore
+  - assets/gitignore/GitBook.gitignore: GitBook.gitignore
+  - assets/gitignore/Jekyll.gitignore: Jekyll.gitignore
+  - assets/gitignore/Java.gitignore: Java.gitignore
+  - assets/gitignore/Maven.gitignore: Maven.gitignore
+  - assets/gitignore/Node.gitignore: Node.gitignore
+  - assets/gitignore/Python.gitignore: Python.gitignore
+  - assets/gitignore/R.gitignore: R.gitignore
+  - assets/gitignore/Ruby.gitignore: Ruby.gitignore
+  - assets/gitignore/Sass.gitignore: Sass.gitignore
+  - assets/gitignore/Global/VirtualEnv.gitignore: Global/VirtualEnv.gitignore
+  - assets/gitignore/Global/Linux.gitignore: Global/Linux.gitignore
+  - assets/gitignore/Global/Windows.gitignore: Global/Windows.gitignore
+  - assets/gitignore/Global/macOS.gitignore: Global/macOS.gitignore
+  - assets/gitignore/Global/Emacs.gitignore: Global/Emacs.gitignore
+  - assets/gitignore/Global/Vim.gitignore: Global/Vim.gitignore
+  - assets/gitignore/Global/JetBrains.gitignore: Global/JetBrains.gitignore
+  - assets/gitignore/Global/SublimeText.gitignore: Global/SublimeText.gitignore
+  - assets/gitignore/Global/KDevelop4.gitignore: Global/KDevelop4.gitignore
+  - assets/gitignore/Global/Kate.gitignore: Global/Kate.gitignore
+  - assets/gitignore/Global/TextMate.gitignore: Global/TextMate.gitignore
+  - assets/gitignore/Global/VisualStudioCode.gitignore:
+      Global/VisualStudioCode.gitignore
+  - assets/gitignore/Global/Xcode.gitignore: Global/Xcode.gitignore
+  - assets/gitignore/Global/Eclipse.gitignore: Global/Eclipse.gitignore
+  - assets/gitignore/Global/TortoiseGit.gitignore: Global/TortoiseGit.gitignore
+  - assets/gitignore/Global/Tags.gitignore: Global/Tags.gitignore
+  - assets/gitignore/Global/Backup.gitignore: Global/Backup.gitignore
+  - assets/gitignore/Global/Patch.gitignore: Global/Patch.gitignore
+  - assets/gitignore/Global/Diff.gitignore: Global/Diff.gitignore
+  - assets/docs/images/coala_logo.svg: artwork/logo/coala_color.svg
+  - assets/docs/images/coala-header.png: artwork/logo/coala-header.png
+  # coalaCSS
+  - assets/coalaCSS/coala.css: coala.css
