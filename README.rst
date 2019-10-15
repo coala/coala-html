@@ -11,9 +11,9 @@ README
 	  pyzzzzzYp	                  z   z
 	 pyzzz      YUU o o oo o o o o o az    z
 	pyzzzzzz      ppy	           u  z
-	pyzzz	     p	               uzz
-	pyz	     p	               u 
-	pyzzz	      p	                        u
+	pyzzz	       p	                  uzz
+	pyz	       p	                  u 
+	pyzzz	     p	                        u
 	pyzzzz	    p	                         u
 	pyz        p                             u
 	 pyzz      p           ggg                 u
