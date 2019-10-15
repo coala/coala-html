@@ -8,11 +8,11 @@ README
 
 	    pppp
 	  ppyyyyyp                         zz
-	  pyzzzzzYp	                 z   z
+	  pyzzzzzYp	                  z   z
 	 pyzzz      YUU o o oo o o o o o az    z
-	pyzzzzzz      ppy	             u  z
-	pyzzz	       p	               uzz
-	pyz	        p	                   u 
+	pyzzzzzz      ppy	           u  z
+	pyzzz	       p	              uzz
+	pyz	       p	                  u 
 	pyzzz	      p	                        u
 	pyzzzz	    p	                         u
 	pyz        p                             u
@@ -23,8 +23,8 @@ README
 	      b                                  kkkkkkk
 	       b	             hhh         kkkkkkk
 		 b	                hhh      kkkkk		
-		  b 	             hhhhhh
-		b b b b b b b b b b b b bb
+		  b 	                  hhhhhh
+		     b b b b b b b b b b b b bb
 
 .. Stop ignoring LineLengthBear
 
