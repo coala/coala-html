@@ -1,7 +1,12 @@
 README
+<<<<<<< HEAD
 =====
 .. image:: https://cloud.githubusercontent.com/assets/7521600/15992701/ef245fd4-30ef-11e6-992d-275c5ca7c3a0.jpg
 
+=======
+======
+.. image:: https://cloud.githubusercontent.com/assets/7521600/15992701/ef245fd4-30ef-11e6-992d-275c5ca7c3a0.jpg
+>>>>>>> 23724d07c0a8e537cada3cb9a8e78d18d55ccf9f
 
 <<<<<<< HEAD
 =======
