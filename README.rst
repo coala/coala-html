@@ -1,4 +1,5 @@
 README
+<<<<<<< HEAD
 =====
 
 .. image:: https://cloud.githubusercontent.com/assets/7521600/15992701/ef245fd4-30ef-11e6-992d-275c5ca7c3a0.jpg
@@ -7,8 +8,25 @@ README
 
 =======
 >>>>>>> 23724d0... Update README.rst
+=======
+<<<<<<< HEAD
+=====
+.. image:: https://cloud.githubusercontent.com/assets/7521600/15992701/ef245fd4-30ef-11e6-992d-275c5ca7c3a0.jpg
+
+=======
+======
+.. image:: https://cloud.githubusercontent.com/assets/7521600/15992701/ef245fd4-30ef-11e6-992d-275c5ca7c3a0.jpg
+>>>>>>> 23724d07c0a8e537cada3cb9a8e78d18d55ccf9f
+
+<<<<<<< HEAD
+=======
+>>>>>>> 28c39a3... README.rst: Change image in coala-html
+=======
+>>>>>>> 1fea9a0... Update README.rst
+>>>>>>> 4def16d4c44585e9500692671929f671572a5e12
 ABOUT
 =====
+
 
 coala-html is an angular application used to display results from
 ``coala-json`` as an interactive web page.
